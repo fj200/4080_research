@@ -1,0 +1,3416 @@
+PostId,Body,Title,Tags,CreationDate,ViewCount,AcceptedAnswerId,AnswerCount,AnswerContent,ImageURL,QuestionType,Popularity,Recency
+1522564,"I used Komodo Edit 5 to write some .py files. My IDE window looks like this:
+
+How do I actually run the .py file to test the program? I tried pressing F5 but it didn't appear to do anything.
+I also tried using IDLE, but it seems like you can only run a couple of lines at a time.
+",How do I run a Python program?,"['python', 'komodo']",10/5/2009 21:42,777353,1527012,10,"<p>I'm very glad you asked! I was just working on explaining this very thing <a href=""http://en.wikibooks.org/wiki/Choose_Your_Own_Pyventure"" rel=""noreferrer"">in our wikibook</a> (which is obviously incomplete).  We're working with Python novices, and had to help a few through exactly what you're asking!  </p>
+
+<p><strong>Command-line Python in Windows:</strong> </p>
+
+<ol>
+<li><p>Save your python code file somewhere, using ""Save"" or ""Save as"" in your editor.  Lets call it 'first.py' in some folder, like ""pyscripts"" that you make on your Desktop.</p></li>
+<li><p>Open a <strong>prompt</strong> (a Windows 'cmd' shell that is a text interface into the computer):   </p>
+
+<p>start > run > ""cmd"" (in the little box).  OK.     </p></li>
+<li><p>Navigate to where your python file is, using the commands 'cd' (change directory) and 'dir' (to show files in the directory, to verify your head).  For our example something like, </p>
+
+<p>> cd C:\Documents and Settings\Gregg\Desktop\pyscripts</p></li>
+<li><p>try:</p>
+
+<p>> python first.py</p></li>
+</ol>
+
+<p>If you get this message:  </p>
+
+<blockquote>
+  <p>'python' is not recognized as an
+  internal or external command, operable
+  program or batch file.</p>
+</blockquote>
+
+<p>then <strong>python</strong> (the <em>interpreter</em> program that can translate Python into 'computer instructions') isn't on your path (see Putting Python in Your Path below).  Then try calling it like this (assuming Python2.6, installed in the usual location):</p>
+
+<p>> C:\Python26\python.exe first.py</p>
+
+<p>(Advanced users:  instead of first.py, you could write out first.py's full path of C:\Documents and Settings\Gregg\Desktop\pyscripts\first.py)</p>
+
+<p><strong>Putting Python In Your Path</strong></p>
+
+<p><em>Windows</em></p>
+
+<p>In order to run programs, your operating system looks in various places,
+and tries to match the name of the program / command you typed with some 
+programs along the way.  </p>
+
+<p>In windows:</p>
+
+<p>control panel > system >  advanced > |Environmental Variables| > system variables -> Path</p>
+
+<p>this needs to include:  C:\Python26; (or equivalent).  If you put it at the front,
+it will be the first place looked.  You can also add it at the end, which is possibly saner.</p>
+
+<p>Then restart your prompt, and try typing 'python'.  If it all worked, you should
+get a "">>>"" prompt.</p>
+",https://i.sstatic.net/V0jvO.png,1,Highly Popular,Old
+1961146,"Please take a look at the picture below.
+When we create an object in java with the new keyword, we are getting a memory address from the OS.
+When we write out.println(objName) we can see a ""special"" string as output. My questions are:
+
+What is this output?
+If it is memory address which given by OS to us:
+a) How can I convert this string to binary?
+b) How can I get one integer variables address?
+
+
+",Memory address of variables in Java,"['java', 'memory-management', 'jvm', 'hashcode', 'memory-address']",12/25/2009 13:10,230588,1961150,9,"<p>That is the class name and <a href=""https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#identityHashCode-java.lang.Object-"" rel=""noreferrer"">System.identityHashCode()</a> separated by the '@' character. What the identity hash code represents is implementation-specific. It often is the initial memory address of the object, but the object can be moved in memory by the VM over time. So (briefly) you can't rely on it being anything.</p>
+
+<p>Getting the memory addresses of variables is meaningless within Java, since the JVM is at liberty to implement objects and move them as it seems fit (your objects may/will move around during garbage collection etc.)</p>
+
+<p><a href=""https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html#toBinaryString-int-"" rel=""noreferrer"">Integer.toBinaryString()</a> will give you an integer in binary form.</p>
+",https://content.screencast.com/users/uzay95/folders/Jing/media/f3caf9f8-b109-41d4-a477-0ad7c10504ce/2009-12-25_1456.png,0,Highly Popular,Old
+1900857,"Can we see the values (rows and cells) in a table valued variable in SQL Server Management Studio (SSMS) during debug time? If yes, how?
+
+",How to see the values of a table variable at debug time in T-SQL?,"['sql', 'debugging', 'ssms', 'table-variable']",12/14/2009 13:14,116791,3987044,9,"<p>That's not yet implemented according this Microsoft Connect link:
+<a href=""http://connect.microsoft.com/VisualStudio/feedback/details/334684/sql-debugging-all-about-tables-table-variables-temp-global-temp-source-input-and-output-tables"" rel=""noreferrer"">Microsoft Connect</a></p>
+",https://i.sstatic.net/7Ognh.png,1,Highly Popular,Old
+3069589,"How can I disable the Java editor breadcrumb in Eclipse?
+
+",How to disable breadcrumbs in Eclipse,"['eclipse', 'breadcrumbs']",6/18/2010 12:35,112578,3069751,11,"<p>If you are referring to the breadcrumbs in the help file of a RCP application, there is <del>only</del>  a <a href=""http://dev.eclipse.org/newslists/news.eclipse.platform/msg68472.html"" rel=""noreferrer"">manual way to do it</a>.</p>
+
+<p>Since <a href=""http://giano.com.dist.unige.it/eclipseMirror/eclipse/downloads/drops/S-3.4M5-200802071530/eclipse-news-M5.html"" rel=""noreferrer"">Ganymede 3.4M5</a>:</p>
+
+<p><img src=""https://i.sstatic.net/pu5vU.png"" alt=""Initial Breadcrump GUI""></p>
+
+<ul>
+<li><a href=""https://stackoverflow.com/users/16883/michael-borgwardt"">Michael Borgwardt</a> <a href=""https://stackoverflow.com/a/3069794/6309"">mentions</a> the toolbar icon <img src=""https://i.sstatic.net/wKewV.jpg"" alt=""dd""></li>
+<li><a href=""https://stackoverflow.com/users/352708/slava-semushin"">Slava Semushin</a> <a href=""https://stackoverflow.com/a/9869403/6309"">provides</a> a native shortcut based on <kbd>Ctrl</kbd>+<kbd>3</kbd>+<code>bread</code>, which points directly to the <code>Toggle Java Editor Breadcrumb</code> option.</li>
+<li><a href=""https://stackoverflow.com/users/2034700/shachi"">Shachi</a> reminds us <a href=""https://stackoverflow.com/a/15154516/6309"">below</a> that you can right-click on any icon on the breadcrumb, and select the entry named ""<code>Hide Breadcrumb</code>"".</li>
+</ul>
+
+<p><img src=""https://i.sstatic.net/ODWFJ.png"" alt=""Hide breadcrumbs""></p>
+
+<hr>
+
+<p>Original answer (manual way, through key mapping)</p>
+
+<blockquote>
+  <p>Find the file <code>org.eclipse.help.webapp\advanced\breadcrumbs.css</code> and replace its contents with.</p>
+</blockquote>
+
+<pre><code>.help_breadcrumbs {
+   display: none;
+}
+</code></pre>
+
+<hr>
+
+<p>For the Java Editor breadcrumb, you need to assign a shortcut to the ""Toggle Java Editor Breadcrumb"" command (I have tested <kbd>Alt</kbd>+<kbd>B</kbd>, for instance)</p>
+
+<p><img src=""https://i.sstatic.net/Vyptq.png"" alt=""alt text""></p>
+
+<p>That shortcut will make the breadcrumb bar appear/disappear at will.</p>
+",https://i.sstatic.net/MEkh3.png,1,Highly Popular,Old
+1151903,"When I use VSTS debugger to see the properties of instance of class Process, many of the properties are marked with InvalidOperationException. Why? Am I doing anything wrong?
+I am using VSTS 2008 + C# + .Net 2.0 to develop a console application.
+Here is my code:
+System.Diagnostics.Process myProcess = new System.Diagnostics.Process();
+myProcess.StartInfo.FileName = ""IExplore.exe"";
+myProcess.StartInfo.Arguments = @""www.google.com"";
+myProcess.StartInfo.Verb = ""runas"";
+myProcess.Start();
+
+And a screenshot of the debugger:
+
+",Invalid Operation Exception from C# Process Class,"['c#', 'visual-studio-2008', 'process', 'invalidoperationexception']",7/20/2009 5:57,53534,1151926,3,"<p>Had you actually started the process when the debugger picture was taken? That's the screenshot I'd expect to see before the <code>Start()</code> method is called.</p>
+
+<p>Note that the common pattern is to create a <code>ProcessStartInfo</code>, populate it, and then call the static <code>Process.Start(startInfo)</code> method. That makes it conceptually simpler: you don't see the <code>Process</code> object until it's been started.</p>
+",https://i.sstatic.net/SrHEj.png,2,Highly Popular,Old
+2439177,"I know this question had been asked many times.
+Align a div to center
+However, I follow their suggestion :
+<center>
+  <div style=""margin : auto; text-align: center"">
+    <a href=""#"" style=""float: left; margin-right: 10px;"">Menu Item 1</a>
+    <a href=""#"" style=""float: left; margin-right: 10px;"">Menu Item 2</a>
+    <a href=""#"" style=""float: left; margin-right: 10px;"">Menu Item 3</a>
+  </div>
+</center>
+
+
+(source: google.com) 
+By using ""Center"" and ""Margin Auto"", ""Text Align Center"" ... I still unable to center the menu item.
+",Use Margin Auto and Center to center Float Left Div,['css'],3/13/2010 17:05,43490,2441388,4,"<p>use inline-block instead of float left.</p>
+
+<pre><code>&lt;center&gt;
+  &lt;div style=""margin : auto; text-align: center""&gt;
+    &lt;a href=""#"" style=""display: -moz-inline-box; display: inline-block; left; margin-right: 10px;""&gt;Menu Item 1&lt;/a&gt;
+    &lt;a href=""#"" style=""display: -moz-inline-box; display: inline-block; margin-right: 10px;""&gt;Menu Item 2&lt;/a&gt;
+    &lt;a href=""#"" style=""display: -moz-inline-box; display: inline-block; margin-right: 10px;""&gt;Menu Item 3&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/center&gt;
+</code></pre>
+",https://i.sstatic.net/NlcT9.png,1,Highly Popular,Old
+2231191,"When you have ""Mark occurrences"" enabled in Eclipse, placing the cursor on any type/variable/method/etc will highlight all occurrences in the text editor and place a faint bar in the right ruler to show you the location of other occurrences in the file.
+Does anyone know where in the Preferences you can change what color is used to highlight the other occurrences in the side ruler? The color is way too faint for me with my current monitor/Windows Aero theme.
+I tried to go into Preferences > General > Appearance > Color and Fonts change the color for ""Color labels - match highlight"" but this didn't seem to apply.
+Here is a screenshot with what I am talking about:
+
+",How to change highlighted occurrences color in Eclipse's sidebar?,"['java', 'eclipse', 'highlighting']",2/9/2010 17:49,42777,2231281,6,"<p>The color in the bar is the same as the color the text is highlighted with in the editor. It is set by going to</p>
+
+<p>Window > Preferences > General > Editors > Text Editors > Annotations</p>
+
+<p>and changing the Occurrences and Write Occurrences colors.</p>
+",https://i.sstatic.net/tgd69.png,1,Highly Popular,Old
+2339932,"Based on my understanding of the Java language, static variables can be initialized in static initialization block.
+However, when I try to implement this in practice (static variables that are final too), I get the error shown in the screenshot below:
+
+",Java - Can final variables be initialized in static initialization block?,"['java', 'static', 'final']",2/26/2010 6:47,41569,2339944,4,"<p>Yes of course: <code>static final</code> variables can be initialized in a static block <em>but</em>.... you have implicit GOTOs in that example (<code>try/catch</code> is essentially a <em>'GOTO catch if something bad happens'</em>).</p>
+
+<p>If an exception is thrown your <code>final</code> variables will not be initialized.</p>
+
+<p>Note that the use of static constructs goes against Object-Oriented dogma. It may complicate your testing and make debugging more difficult.</p>
+",https://i.sstatic.net/5I0am.jpg,0,Highly Popular,Old
+32494,"I coded a Mancala game in Java for a college class this past spring, and I used the Eclipse IDE to write it.  One of the great (and fairly simple) visual aids in Eclipse is if you select a particular token, say a declared variable, then the IDE will automatically highlight all other references to that token on your screen.  Notepad++, my preferred Notepad replacement, also does this.
+Another neat and similar feature in Eclipse was the vertical ""error bar"" to the right of your code (not sure what to call it).  It display little red boxes for all of the syntax errors in your document, yellow boxes for warnings like ""variable declared but not used"", and if you select a word, boxes appear in the bar for each occurrence of the word in the document.
+A screenshot of these features in action:
+ 
+After a half hour of searching, I've determined that Visual Studio cannot do this on its own, so my question is:  does anyone know of any add-ins for 2005 or 2008 that can provide either one of the aforementioned features?
+Being able to highlight the current line your cursor is on would be nice too.  I believe the add-in ReSharper can do this, but I'd prefer to use a free add-in rather than purchase one.
+",Visual Studio identical token highlighting,"['visual-studio', 'visual-studio-2008', 'visual-studio-2005']",8/28/2008 14:56,37327,42043,11,"<p>In a different question on SO (<a href=""https://stackoverflow.com/questions/41908/customizing-visual-studio"">link</a>), someone mentioned the VS 2005 / VS 2008 add-in ""RockScroll"".  It seems to provide the ""error bar"" feature I was inquiring about in my question above.</p>
+
+<p><a href=""http://www.hanselman.com/blog/IntroducingRockScroll.aspx"" rel=""nofollow noreferrer"">RockScroll</a></p>
+
+<p>EDIT:  RockScroll also does the identical token highlighting that I was looking for!  Great!</p>
+",https://i.sstatic.net/XZeTy.jpg,1,Highly Popular,Old
+2333479,"I don't need to read complex XML files. I just want to read the following configuration file with a simplest XML reader
+<config>
+    <db-host>localhost</db-host>
+    <db-port>3306</db-port>
+    <db-username>root</db-username>
+    <db-password>root</db-password>
+    <db-name>cash</db-name>
+</config>
+
+How to read the above XML file with a XML reader through Java?
+
+",How to read an XML file with Java?,"['java', 'xml']",2/25/2010 11:09,28227,2333504,9,"<p>Since you want to parse config files, I think <a href=""http://commons.apache.org/configuration/"" rel=""noreferrer"">commons-configuration</a> would be the best solution.</p>
+
+<blockquote>
+  <p>Commons Configuration provides a generic configuration interface which enables a Java application to read configuration data from a variety of sources (including XML)</p>
+</blockquote>
+",https://i.sstatic.net/iatXr.jpg,1,Highly Popular,Old
+1151237,"I have the following test case in eclipse, using JUnit 4 which is refusing to pass. What could be wrong?
+@Test(expected = IllegalArgumentException.class)
+public void testIAE() {
+    throw new IllegalArgumentException();
+}
+
+This exact testcase came about when trying to test my own code with the expected tag didn't work. I wanted to see if JUnit would pass the most basic test. It didn't.
+I've also tested with custom exceptions as expected without luck.
+Screenshot:
+
+
+",JUnit expected tag not working as expected,"['java', 'unit-testing', 'junit', 'junit4']",7/19/2009 23:56,26993,1151384,3,"<p>The problem is that your <code>nnounceThreadTest</code> extends <code>TestCase</code>. Because it extends <code>TestCase</code>, the JUnit Runner is treating it as a JUnit 3.8 test, and the test is running because it starts with the word test, hiding the fact that the <code>@Test</code> annotiation is in fact not being used at all.</p>
+<p>To fix this, remove the <code>extends TestCase</code> from the class definition.</p>
+",https://i.sstatic.net/tVTcA.png,2,Average Popular,Old
+1685079,"I am looking for Eclipse themes that are similar to the following and support Python/xhtml/css/js by default.
+
+",Color Themes For Eclipse Python Development,"['python', 'eclipse', 'themes']",11/6/2009 2:40,24958,1685526,3,"<p><a href=""http://pydev.blogspot.com/2009/07/creating-dark-theme-and-exporting-and.html"" rel=""nofollow noreferrer"">Here</a>'s a dark theme and instructions on making it.
+<a href=""http://wiki.creativecommons.org/Rewrite_Metadata_Validator/SoC_2008/PyDev_integration_with_the_Darklooks_theme"" rel=""nofollow noreferrer"">And another.</a></p>
+
+<p>There was some discussion of this on SO <a href=""https://stackoverflow.com/questions/506999/eclipse-editor-colors-a-healthy-configuration"">already</a>.</p>
+
+<p><img src=""https://1.bp.blogspot.com/_EFaA1IqAbHY/Sms-0HdTGfI/AAAAAAAAAnU/nHqhfaRJojM/s400/dark_theme.png"" alt=""alt text""></p>
+",https://i.sstatic.net/JIAC1.png,0,Average Popular,Old
+873432,"Recently I started using NetBeans 6.7 beta for PHP development instead of Textmate and MacGDBp. I am rather amazed with it's feature set and most everything worked out of the box, or was easily configured to my liking.
+I am having an issue with the code completion features though; they work for built-in functions, SPL and some of my code, but not all of my code, specifically, it never works for any methods in my classes, regardless of PHPDoc comments.
+I can't seem to find any decent questions, let alone answers about this specific subject anywhere. It looks like everybody else who has problems with the code completion just hasn't enabled the auto-popup feature.
+So the big question is:
+Is there any way to influence the code completion cache, or something I have to add to my code to make it work? I'd really like to have code completion for the methods I write.
+PS: I have tried several older versions of netbeans, they all exhibit the same problem.
+edit: I've put a .zip up of my current test project. get it here. It's a very young project, think a day and a half.
+edit2: Below is a screenshot of what i'm looking at. As you can see, it fails to complete pretty much anything, nor does it see the PHPDoc documentation.
+
+
+",NetBeans PHP code completion for own code,"['netbeans', 'code-completion']",5/16/2009 22:12,21418,874778,5,"<p>I've tried opening your project, and the completion seems to be working just fine for me.</p>
+
+<p>The only thing I can think of is to try to delete your entire NB cache, which should be located in <code>$HOME/.netbeans/$VERSION/var/cache/</code>. This is a wild guess</p>
+
+<p><strong>Create a backup first</strong>, I didn't try this!</p>
+
+<p>If that fails, maybe you should try creating a new project, maybe that will kick NB in the butt.</p>
+
+<p>Note that in NB 7.2 beta, the cache has moved to $HOME/.cache/netbeans/$VERSION.</p>
+",https://i.sstatic.net/ubVyA.png,1,Average Popular,Old
+57712,"What is the best way to get hosting of an ASP.NET MVC application to work on IIS 5 (6 or 7). When I tried to publish my ASP.NET MVC application, all I seemed to get is 404 errors. I've done a bit of googleing and have found a couple of solutions, but neither seem super elegant, and I worry if they will be unusable once I come to use a shared hosting environment for the application.
+Solution 1
+
+
+Right-click your application virtual directory on inetmgr.exe.
+Properties->Virtual Directory Tab-> Configuration.
+Add a new mapping extension. The extension should be .*, which will be
+  mapped to the Executable
+  C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\aspnet_isapi.dll,
+  or the appropriate location on your
+  computer (you can simply copy this
+  from the mapping for .aspx files). On
+  the mapping uncheck ""check that file
+  exists"".
+3 X OK and you're good to go.
+If you want, you can apply this setting to all your web sites. In
+  step1, click on the ""Default Web Site""
+  node instead of your own virtual
+  directory, and in step 2 go to the
+  ""Home Directory"" tab. The rest is the
+  same.
+
+
+It seems a tad hacky to route everything through ASP.NET.
+Solutions 2
+Edit the MVC routing to contain .mvc in the URL and then follow the steps in solution 1 based around this extension. Edit: The original image link was lost, but here it is from Google's Cache:
+
+",ASP.NET MVC and IIS 5,"['asp.net-mvc', 'iis', 'shared-hosting']",9/11/2008 21:30,21307,57738,5,"<p>Answer is <a href=""http://forums.asp.net/p/1239943/2294813.aspx"" rel=""nofollow noreferrer"">here</a></p>
+
+<blockquote>
+  <p>If *.mvc extension is not registered
+  to the hosting , it will give 404
+  exception. The working way of hosting
+  MVC apps in that case is to modify
+  global.asax routing caluse in the
+  following way.</p>
+  
+  <p>routes.Add(new
+  Route(""{controller}.mvc.aspx/{action}"",
+  new MvcRouteHandler()) {
+      Defaults = new RouteValueDictionary (new{ controller
+  = ""YourController""} ) });</p>
+  
+  <p>In this way all your controller
+  request will end up in *.mvc.aspx,
+  which is recognized by your hosting.
+  And as the MVC dlls are copied into
+  your local bin , no special setttings
+  need to be done for it.</p>
+</blockquote>
+",https://i.sstatic.net/TDp4F.png,0,Average Popular,Old
+3552763,"I would like to understand why you might want to use the global:: prefix. In the following code, ReSharper is identifying it as redundant, and able to be removed:
+
+",Why use the global keyword in C#?,"['c#', 'namespaces', 'global']",8/24/2010 0:39,16529,3552781,3,"<p>It is best to use the global namespace prefix in generated code. This is done to avoid situations where a similar named type exists in your namespace.</p>
+
+<p>If you create a type named <code>System.Diagnostics.DebuggerNonUserCodeAttribute</code> <strong>inside your namespace</strong> you will notice that ReSharper no longer says that the <code>global::</code> is not needed. The code generator simply wants to avoid any collisions with the names of your own types.</p>
+",https://farm5.static.flickr.com/4141/4922038418_f6906070c3_o.png,0,Average Popular,Old
+190625,"I have created the following stored procedure..
+CREATE PROCEDURE [dbo].[UDSPRBHPRIMBUSTYPESTARTUP]
+(
+  @CODE CHAR(5)
+  , @DESC VARCHAR(255) OUTPUT
+)
+AS
+DECLARE @SERVERNAME nvarchar(30)
+DECLARE @DBASE nvarchar(30)
+DECLARE @SQL nvarchar(2000)
+
+SET @SERVERNAME = 
+  Convert(nvarchar,
+  (SELECT spData FROM dbSpecificData WHERE spLookup = 'CMSSERVER'))
+SET @DBASE = 
+  Convert(nvarchar,
+  (SELECT spData FROM dbSpecificData WHERE spLookup = 'CMSDBNAME'))
+
+SET @SQL = 
+  'SELECT clnt_cat_desc FROM ' + @SERVERNAME + 
+  '.' + @DBASE + '.dbo.hbl_clnt_cat WHERE inactive = ''N''
+  AND clnt_cat_code = ''' + @CODE + ''''
+
+EXECUTE sp_executeSQL @SQL
+
+RETURN
+
+This procedure is used in many different databases and many different servers and is written as dynamic SQL to simplify maintenance. The procedure also runs on a different server than the one the procedure points to.
+I want to use the output of this procedure as a value in a table...
+DECLARE @clid BIGINT
+DECLARE @fileid BIGINT
+DECLARE @myCode CHAR(5)
+DECLARE @myDesc VARCHAR(255)
+DECLARE @@tempDesc VARCHAR(255)
+
+SET @clid = 1831400022
+SET @fileid = 2072551358
+SET @myCode = 
+  (SELECT _clientPrimBusinessType FROM udbhextclient WHERE clid = @clid)
+
+SET @myDesc = 
+  EXEC UDSPRBHPRIMBUSTYPESTARTUP @CODE = @myCode, @DESC = @@tempDesc OUTPUT
+----------------------------------------------------------------------------
+SELECT
+  a.clid
+  , b.fileid
+  , c.usrfullname AS ClientPartner
+  , e.usrfullname AS ClientFeeEarner
+  , @myDesc AS ClientPrimaryBusinessType
+FROM 
+  dbclient a
+    INNER JOIN
+  dbFile b
+    ON
+  a.clid = b.clid
+    INNER JOIN
+  dbuser c
+    ON 
+  a.feeusrid = c.usrid
+    INNER JOIN
+  udbhextclient d
+    ON
+  a.clid = d.clid
+    INNER JOIN
+  dbuser e
+    ON
+  d._ClientFeeEarner = e.usrid
+WHERE 
+  a.clid = @clid
+  AND b.fileid = @fileid
+
+I know this is the incorrect syntax, but you can see what I am trying to achieve this without resorting to temporary tables as this would mean maintenance across 30 different servers with 3 to 5 databases on each.
+Smink - Tried your solution and got the following results...
+
+",Initialise A Variable With The Output Of A Stored Procedure In MS SQL Server,"['sql-server', 'sql-server-2005', 't-sql', 'stored-procedures']",10/10/2008 9:20,15609,190665,4,"<p>Change the line:</p>
+
+<pre><code>SET @myDesc = 
+  EXEC UDSPRBHPRIMBUSTYPESTARTUP @CODE = @myCode, @DESC = @@tempDesc OUTPUT
+</code></pre>
+
+<p>to</p>
+
+<pre><code>EXEC UDSPRBHPRIMBUSTYPESTARTUP @CODE = @myCode, @DESC = @tempDesc OUTPUT
+</code></pre>
+
+<p>And you have missed assigning <code>@DESC</code> in the stored procedure.</p>
+
+<pre><code>SET @SQL = 
+  'SELECT @DESC = clnt_cat_desc FROM ' + @SERVERNAME + 
+  '.' + @DBASE + '.dbo.hbl_clnt_cat WHERE inactive = ''N''
+  AND clnt_cat_code = ''' + @CODE + ''''
+
+EXECUTE sp_executeSQL @SQL, N'@DESC varchar(255) output', @DESC output
+</code></pre>
+
+<p>You should then use <code>@tempDesc</code> in the next select:</p>
+
+<pre><code>SELECT
+  a.clid
+  , b.fileid
+  , c.usrfullname AS ClientPartner
+  , e.usrfullname AS ClientFeeEarner
+  , @tempDesc AS ClientPrimaryBusinessType
+</code></pre>
+
+<p>Also your stored procedure allows for SQL injection around:</p>
+
+<pre><code>SET @SQL = 
+  'SELECT clnt_cat_desc 
+     FROM ' + QUOTENAME(@SERVERNAME) + '.' + QUOTENAME(@DBASE) + '.dbo.hbl_clnt_cat
+    WHERE inactive = ''N''
+      AND clnt_cat_code = @CODE'
+
+EXECUTE sp_executeSQL @SQL, N'@CODE CHAR(5)', @CODE
+</code></pre>
+
+<p>(Update: Fixed SQL Injection issues.)</p>
+",https://farm4.static.flickr.com/3029/2928268613_dd3c454f92.jpg,1,Average Popular,Old
+1427871,"Whilst debugging in Xcode_3.1.2 I am pretty sure I could see the contents of my NSString arrays. However after upgrading to 3.2 I only see the following ...
+
+I know I can print the object in (gdb) using ""po planetArray"" or simply click in the debugger and ""print description to console"" I am just curious, as I am sure it worked prior to upgrading. Anyone know anything about this? 
+cheers gary
+edit: data formatters is on and it shows what you see above ...
+",Xcode 3.2 Debug: Seeing whats in an array?,"['xcode', 'debugging']",9/15/2009 15:26,14755,1571095,3,"<p>This is because GDB acts as if the variable you are viewing is out of scope while it really just is confused about what each part function or method call of the data formatter is returning (the data formatter is the ""{(unichar *)Xcode_CFStringSummary($VAR, $ID)}:s"" part you are seeing. 
+When you are debugging and you are in a method where you know a local variable must be in scope right now, open the debugger window and the area where you can see ""Variable"", ""Value"" and ""Summary"" column titles double click the ""Summary"" row entry for the variable you are interested in and enter the following (for array types like NSArray or NSCFArray):</p>
+
+<p>""{(int)[$VAR count]} objects {(NSString *)[(NSArray *)$VAR description]}:s""</p>
+
+<p>then press return. You have now overwritten the default data formatter provided by Xcode's GDB extension (to be found in various plists at ""/Developer/Library/Xcode/CustomDataViews/"") with your own data formatter string. </p>
+
+<p>Your own overrides are saved at ""~/Library/Application Support/Developer/Shared/Xcode/CustomDataViews/CustomDataViews.plist"" and if you want to have the Apple default data formatter back just double click the row for a variable of the same type and delete whatever is there. </p>
+
+<p>The nitty-gritty details: In the custom expression above the ""{}"" construct tells GDB to execute a command (as if you where executing it from GDB's debugger command line, which means the same restrictions apply: you need to specify the return type in cast parens in front of every function or method which returns something). The "":s"" behind the closing curly brace tells Xcode and GDB to reference the ""Summary"" column. Also valid would be "":v"" which references the ""Value"" column which most of the time is just the pointer value. Everything that is outside of the curly braces is shown verbatim. 
+Unfortuntely curly braces can't be nested which invalidates ternary operator conditionals.</p>
+
+<p>So with the above data formatter you should see the following for an empty NSArray:</p>
+
+<p>""0 objects (\n)""</p>
+
+<p>If you want to write your own data formatters as GDB extensions (equivalent to specifying a function akin to Xcode_CFStringSummary above) you can do so. Take a look at the following header: ""/Developer/Applications/Xcode.app/Contents/PlugIns/GDBMIDebugging.xcplugin/Contents/Headers/DataFormatterPlugin.h""</p>
+
+<p>it will tell you all you need to know. But it can be hard to get it right. It might be easier and less error prone to just define another method on your class and call that from the data formatter string instead of ""description"".</p>
+",https://farm3.static.flickr.com/2565/3922568083_1eb5dd9285_o.png,2,Average Popular,Old
+441038,"I get this error when debugging my ASP.NET web application after I trigger an UpdatePanel:
+
+htmlfile: Unknown runtime error
+and ""updatePanelElement.innerHTML=rendering"" is highlighted in a ScriptResource.axd file.
+","ASP.NET UpdatePanel Error htmlfile: Unknown runtime error, updatePanelElement.innerHTML=rendering","['asp.net', 'ajax', 'updatepanel']",1/13/2009 22:11,14735,441050,6,"<p>This seems to happen because I've got my UpdatePanel within an ordered list &lt;ol&gt; container.  And I've got list item &lt;li&gt; tags within my UpdatePanel's ContentTemplate.</p>
+
+<pre><code>&lt;ol&gt;
+    &lt;li&gt;...&lt;/li&gt;
+    &lt;asp:UpdatePanel ...&gt;
+        &lt;ContentTemplate&gt;
+            &lt;li id=""lione"" runat=""server""&gt;...&lt;/li&gt;
+            &lt;li id=""litwo"" runat=""server""&gt;...&lt;/li&gt;
+        &lt;/ContentTemplate&gt;
+        &lt;Triggers&gt;
+            ...
+        &lt;/Triggers&gt;
+    &lt;/asp:UpdatePanel&gt;
+    &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+<p>It makes sense to me this way, but I guess I'll need to rethink my page layout.</p>
+",https://i.sstatic.net/CqrGC.gif,2,Average Popular,Old
+2771799,"I'm using Latex and the listings package to display some C++ code (with syntax highlighting) inside a document.
+I need to highlight some parts of the code. This specific highlight has nothing to do with syntax highlighting, it's just some parts of the code I'd like to highlight so that the reader can focus on it.
+I wish I could make some variable name, for instance, displaying in bold, and on a yellow background. Here is something I did with MSWord I'd like to reproduce with Latex (of course, not the red and green underlining):
+
+.
+I haven't found a way to do it with the listings package. Is it possible?
+",latex and listings: highlighting some parts of the code,['latex'],5/5/2010 9:07,11066,2771832,3,"<p>You can enable arbitrary LaTeX commands inside your <code>listings</code> region:</p>
+
+<pre><code>\begin{listings}[escapeinside=\{\}]
+{\highlight{Colonnes[3] = 9}}
+\end{listings}
+</code></pre>
+
+<p><code>\highlight</code> is your highlighting macro (you need to write it yourself). See the listings documentation, section 4.14 (“Escaping to LaTeX”) for further details. Notice that you now need to escape every other occurrence of the special characters in your code – so for C++ code, <code>{}</code> is probably a bad choice.</p>
+",https://i.sstatic.net/cWDww.png,2,Average Popular,Old
+2888264,"i try to learn asp.net Profile management. But i added below xml firstName,LastName and others. But i cannot write Profile. if i try to write Profile property. drow my editor Profile : Error   1   The name 'Profile' does not exist in the current context    C:\Documents and Settings\ykaratoprak\Desktop\Security\WebApp_profile\WebApp_profile\Default.aspx.cs    18  13  WebApp_profile
+How can i do that?
+
+    <authentication mode=""Windows""/>
+    <profile>
+      <properties>
+        <add name=""FirstName""/>
+        <add name=""LastName""/>
+        <add name=""Age""/>
+        <add name=""City""/>
+      </properties>
+    </profile>
+
+
+ protected void Button1_Click(object sender, System.EventArgs e)
+        {
+            Profile.FirstName = TextBox1.Text;
+            Profile.LastName = TextBox2.Text;
+            Profile.Age = TextBox3.Text;
+            Profile.City = TextBox4.Text;
+
+            Label1.Text = ""Profile stored successfully!<br />"" +
+                ""<br />First Name: "" + Profile.FirstName +
+                ""<br />Last Name: "" + Profile.LastName +
+                ""<br />Age: "" + Profile.Age +
+                ""<br />City: "" + Profile.City;
+        }
+
+
+
+",How to use Profile in ASP.NET?,"['c#', 'asp.net', 'profile']",5/22/2010 13:30,9958,2888542,4,"<p>To use Profiles in the manner you describe requires a Web Site project.  Your question implies that you have a Web Application project.</p>
+
+<p>Using profiles in a Web Application project is a little more work than with a Web Site as the dynamic ProfileCommon class is not generated for you.</p>
+
+<p>Here are some references to help you understand the differences.</p>
+
+<p><a href=""http://weblogs.asp.net/anasghanem/archive/2008/04/12/the-differences-in-profile-between-web-application-projects-wap-and-website.aspx"" rel=""nofollow noreferrer"">http://weblogs.asp.net/anasghanem/archive/2008/04/12/the-differences-in-profile-between-web-application-projects-wap-and-website.aspx</a></p>
+
+<p>And here is a tool that can make using profiles in Web Applications easier.</p>
+
+<p><a href=""http://weblogs.asp.net/joewrobel/archive/2008/02/03/web-profile-builder-for-web-application-projects.aspx"" rel=""nofollow noreferrer"">http://weblogs.asp.net/joewrobel/archive/2008/02/03/web-profile-builder-for-web-application-projects.aspx</a></p>
+",https://i.sstatic.net/8HWN1.gif,1,Average Popular,Old
+830645,"I'd like to be able to highlight the wrap margin/text width in vim by changing the background color (or maybe just a line?).  A lot of IDEs have this.  I mocked up what I'm talking about:
+
+Anyone know if this can be done in macvim or gvim?
+",Changing background color in vim at a certain column,"['vim', 'macvim']",5/6/2009 16:59,9562,830676,3,"<p>Try this:</p>
+
+<pre><code>:match ErrorMsg '\%&gt;80v.\+'
+</code></pre>
+
+<p>It will highlight text beyond 80 characters, you can replace '80' with whatever wrap-width you have. However, it will only highlight the characters that exceed the width, and then only on lines that are actually longer than the width.</p>
+
+<p>Check <a href=""http://vim.wikia.com/wiki/Highlight_long_lines"" rel=""noreferrer"">http://vim.wikia.com/wiki/Highlight_long_lines</a> for more info, but they all pretty much accomplish the same thing.</p>
+",https://farm4.static.flickr.com/3598/3508086136_6c075936a5_o.jpg,1,Average Popular,Old
+917575,"I am trying to do something similar to this sample code from Phil Haack to VB, and LINQ Orderby is giving me problems - and I can't figure out how to do this. Entire method posted for completenes.
+This is the C# version:
+    public ActionResult DynamicGridData(string sidx, string sord, int page, int rows)
+    {
+        var context = new HaackOverflowDataContext();
+        int pageIndex = Convert.ToInt32(page) - 1;
+        int pageSize = rows;
+        int totalRecords = context.Questions.Count();
+        int totalPages = (int)Math.Ceiling((float)totalRecords / (float)pageSize);
+
+        var questions = context.Questions.OrderBy(sidx + "" "" + sord).Skip(pageIndex * pageSize).Take(pageSize);
+
+        var jsonData = new
+        {
+            total = totalPages,
+            page = page,
+            records = totalRecords,
+            rows = (
+                from question in questions
+                select new
+                {
+                    i = question.Id,
+                    cell = new string[] { question.Id.ToString(), question.Votes.ToString(), question.Title }
+                }).ToArray()
+        };
+        return Json(jsonData);
+    }
+
+My problem is with this line...:
+var questions = context.Questions.OrderBy(sidx + "" "" + sord).Skip(pageIndex * pageSize).Take(pageSize);
+
+In VB.Net OrderBy does not accept a string as value - and it seems to do that in C# (or I am missing something).
+(Please not the use of VAR is not the issue here, I have that covered. :) )
+Edit:
+This is the error I get (I simply cannot compile): 
+Overload resolution failed because no accessible 'OrderBy' can be called with these arguments...
+Screenshot of complete error message: 
+
+Edit2:
+More information, as requested.
+sidx contains the name of a column to sort by
+sord contains asc or desc
+The VB-code: 
+Function MemberData(ByVal sidx As String, ByVal sord As String, ByVal page As Integer, ByVal rows As Integer) As JsonResult
+
+    Dim allRecords As IQueryable(Of Models.Member) = Me.MemberRepository.FindAllMembers
+    Dim currentPageRecords As IQueryable(Of Models.Member)
+    Dim pageIndex As Integer = page - 1
+    Dim pageSize As Integer = rows
+    Dim totalRecords As Integer = allRecords.Count
+    Dim totalPages As Integer = CInt(Math.Ceiling(totalRecords / pageSize))
+
+    Dim orderBy As String = sidx + "" "" + sord
+
+    currentPageRecords = allRecords.OrderBy(Function(m) orderBy).Skip(pageIndex * pageSize).Take(pageSize)
+
+    Dim jsonData = New With { _
+          .total = totalPages, _
+          .page = page, _
+          .records = totalRecords, _
+          .rows = New ArrayList _
+        }
+
+    For Each member As Models.Member In currentPageRecords
+        jsonData.rows.Add(New With {.id = member.MemberId, .cell = GenerateCellData(member)})
+    Next
+
+    Return Json(jsonData)
+
+End Function
+
+",LINQ - Dynamic OrderBy in VB.Net,"['c#', 'vb.net', 'linq']",5/27/2009 19:25,9246,917844,4,"<p>Is it possible he's using <a href=""http://weblogs.asp.net/scottgu/archive/2008/01/07/dynamic-linq-part-1-using-the-linq-dynamic-query-library.aspx"" rel=""nofollow noreferrer"">Dynamic Linq?</a> With dynamic linq you can pass string to the OrderBy methods as well as many other of the IEnumerable extension methods.</p>
+",https://i.sstatic.net/5JBsa.png,1,Average Popular,Old
+881466,"I am using SoapUI 2.5.1 - evaluation version
+In a testcase, how to save the response messages along with requests in a SoapUI project ?
+Here is what is happening currently: 
+When I create a Web service SoapUI project and send SOAP request for an operation, I get a response XML. Now after saving the soapUI and exiting the tool - when I open it again I see the response XML tab as empty.
+
+
+Why only request gets saved and not responses - Is it a bug in SoapUI ?
+Thanks
+-Arun
+",how to save response when saving a SoapUI project,"['wcf', 'web-services', 'testing', 'soap', 'soapui']",5/19/2009 7:54,9101,882711,2,"<p>As Thomas Bratt indicates, the response is not saved because in most cases, it doesn't make sense to do so.  SoapUI is intended for testing; if you want to save your test results, you'll have to do that explicitly.</p>
+
+<p>To save a specific response message, use the context menu of the response editor, (or press Ctrl+S), and save it to file.  You can load it back if you want, using the same context menu (or press Ctrl+L).</p>
+",https://i.sstatic.net/BXmK7.jpg,1,Average Popular,Old
+1627189,"If I've got my Eclipse windows split vertically, is there any keyboard shortcut to move to the logical left/right editor?
+For example, in the image blow, the right editor is selected, and I want to move to the left window:
+
+For those of you who know Vim, I am trying to recreate c-w h and c-w l.
+","Shortcut for ""move to left editor"" and ""move to right editor"" in Eclipse?","['eclipse', 'keyboard-shortcuts']",10/26/2009 20:37,8893,8984879,7,"<p>The answer from Csaba_H is right : there is no keyboard shortcut to switch from one editor area to the next. The most you can do through keyboard shortcuts is to switch to ""another editor"", whatever its area is (left, right, top, bottom... whatever you tiled the area into :p) through the usual shortcuts :</p>
+
+<ul>
+<li>next editor : <kbd>ctrl</kbd> + <kbd>F6</kbd></li>
+<li>previous editor : <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>F6</kbd></li>
+<li>quick switch editor : <kbd>ctrl</kbd> + <kbd>E</kbd></li>
+</ul>
+
+<p>I'll only mention that you can also take a look yourself to all available shortcuts in your Eclipse if you go to Window > preferences and go into the section General > Keys (a shortcut to get there is to use <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>L</kbd> twice). </p>
+",https://i.sstatic.net/iqSHj.png,1,Average Popular,Old
+2851094,"As I use vim, it tries to be helpful by highlighting groups of four spaces in yellow, as shown.
+
+My .vimrc file says, in its entirety, set tabstop=4.
+How can I keep vim from highlighting the indentation in my files?
+",How to remove indentation highlighting in vim?,"['vim', 'configuration', 'syntax-highlighting', 'indentation']",5/17/2010 17:03,8743,2851142,3,"<p>Is this a case of highlighting the last search? If so, try typing "":noh"".</p>
+",https://i.sstatic.net/rQcCM.png,1,Average Popular,Old
+2390314,"I could have sworn that I've used NUnit's Assert.Throws to determine whether or not a particular exception gets thrown from a method, but my memory has failed me before.  I read this post here on SO, but it didn't answer my question, as I know the correct syntax, and I don't want to do anything with the exception that gets returned (I don't want to look at the Exception's members, though this could be useful down the road).
+I wrote unit tests to prove my lack of understanding in the use of Dictionary, and couldn't get it handle the KeyNotFoundException that gets thrown.  Instead of NUnit catching it and passing the test, I get an unhandled KeyNotFoundException error when I run.  I verified that I don't have the VS IDE set up to break on thrown .NET exceptions.
+I've tried this two ways:
+Assert.Throws( typeof(KeyNotFoundException), () => value = prefs[""doesn't exist""]);
+
+and
+Assert.Throws<KeyNotFoundException>( () => value = prefs[""doesn't exist""]);
+
+but both result in an unhandled exception.  What am I missing here?
+UPDATE seems like others can't reproduce this.  Here's a screenshot:
+
+
+",Having trouble getting NUnit's Assert.Throws to work properly,"['unit-testing', 'exception', 'dictionary', 'nunit', 'keynotfoundexception']",3/5/2010 22:15,8680,2724127,4,"<p>The debugger is stating that your exception is not being handled by user code, which is technically true.  To demonstrate, I'll use the sample test sgreeve provided</p>
+
+<pre><code>[Test]
+public void demonstrateThatExceptionThrown()
+{
+    string value;
+    Dictionary&lt;string, string&gt; test = new Dictionary&lt;string, string&gt;();
+    Assert.Throws(typeof(KeyNotFoundException), () =&gt; value = test[""h""]);
+}
+</code></pre>
+
+<p>When you execute it, you will receive a warning in VisualStudio that the exception is unhandled in user code. If you look at the callstack, you will see something like</p>
+
+<pre><code>[External Code]
+CodeTests.DLL!CodeTests.MiscTests.demonstrateThatExceptionThrown.AnonymousMethod()
+[External Code]
+CodeTests.DLL!CodeTests.MiscTests.demonstrateThatExceptionThrown()
+[External Code]
+</code></pre>
+
+<p>Because you have specified a delegate, the exception is happening within the ""AnonymousMethod"" that was created. This is being called by the .Net framework. The debugger is stopping because your delegate isn't handling the exception before it gets passed back to the framework. It doesn't care that further up the stack it might be handled in your code (perhaps since there is no way to guarantee that the external code will handle the exception correctly.) </p>
+
+<p>To have VisualStudio see this as a handled exception, use the ExpectedException attribute and remove the delegate, like so:</p>
+
+<pre><code>[Test]
+[ExpectedException(typeof(KeyNotFoundException))]
+public void demonstrateThatExceptionThrown()
+{
+    string value;
+    Dictionary&lt;string, string&gt; test = new Dictionary&lt;string, string&gt;();
+    value = test[""h""];
+}
+</code></pre>
+",https://i.sstatic.net/4u80Y.png,2,Average Popular,Old
+985529,"<asp:UpdatePanel runat=""server"">
+    <ContentTemplate>
+        <div style=""padding: 0px 45px 0px 45px"">
+            <asp:FormView ID=""fvAccounts"" runat=""server"" DataKeyNames=""AccountId"" DataSourceID=""edsAccounts"" EnableModelValidation=""True"" Width=""100%"">
+                <EditItemTemplate>
+<%-- continuing --%>
+
+I want the FormView to be 45px (hippos :P) away from the page's width, so I wrapped it with a div setting its padding to 45 for right and left, but it didn't work; the right side goes out the div. I want it to be minimized within the div.
+Note the black line in the image, it shows where the edge of the parent is, I want the external right side to be 45px away from it to inside.
+
+",Problem with HTML DIV style-padding,"['html', 'css']",6/12/2009 7:58,7545,991575,4,"<p>Well I solved my issue in quite a different way.</p>
+
+<p>I set the FormView's Width to 80% and I wrapped it with a center Html tag.</p>
+
+<pre><code>&lt;center&gt;
+    &lt;FormView Width=""80%"" runat=""server"" /&gt;
+&lt;/center&gt;
+</code></pre>
+",https://farm3.static.flickr.com/2466/3619186342_0467eeb875_o.jpg,2,Average Popular,Old
+2421701,"I recently upgraded to using ReSharper 5 (currently in beta). I noticed that in ASP.Net MVC projects, ReSharper underlines in red all of the return statements inside a controller:
+
+I personally find this pretty annoying because it looks like an error. Clicking on the underlined text doesn't offer any help (ie, a lightbulb). I don't see an option to change the styling of this text in Environment -> Fonts and Colors, and so far it looks like the only way to disable it is to un-check the ""Enable ASP.Net MVC References"" in the ASP.Net -> Other Re-Sharper options.
+What's the point of this highlighting? Am I missing out on something special that ReSharper is offering me? Is there a way to remove the highlighting while still enabling MVC support in ReSharper?
+",What's the point of the red underline highlighting in ReSharper 5 for ASP.Net MVC?,"['asp.net-mvc', 'visual-studio', 'resharper']",3/11/2010 0:20,7508,2423324,3,"<p>It's not red - it's brown. It matches color of string literals in standard VS color scheme.</p>
+
+<p>To change it's color:</p>
+
+<ol>
+<li>Install ReSharper 6+</li>
+<li>Within Visual Studio navigate to <code>Tools</code> → <code>Options</code> → <code>Environment</code> → <code>Fonts &amp; Colors</code></li>
+<li>Scroll down to <code>ReSharper ASP.NET MVC *</code> and change the <code>Item foreground</code> color (and <code>Item background</code> if you'd like) to whatever color suits you best. In your specific case you'll want to change the <code>Item foreground</code> of <code>ReSharper ASP.NET MVC View</code>.</li>
+</ol>
+
+<p>If at the third step you can't find the ReSharper items you should reset the <code>Fonts &amp; Colors</code> cache manually by deleting the <code>HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\9.0\FontAndColors\Cache</code> key in the registry (You may have to delete the key located in <code>...\10.0\...</code>, too.)</p>
+",https://i.sstatic.net/SROlp.gif,0,Average Popular,Old
+3799540,"What is this Error For?
+I repaired my Vs but this did not solve it.
+
+My OS :  Windows 7 64 bit home edition.
+Visual studio 2010 Ultimate.
+Does My question need more information?
+",Failed to Create AppDomain,"['asp.net', 'visual-studio', 'visual-studio-2010']",9/26/2010 19:56,7248,4527008,3,"<p>Quite late but still hope this will be useful for somebody:</p>
+
+<p>I got into the same nightmare these days and none of the found solutions worked for me. I tried this link <a href=""http://www.codeproject.com/Questions/113246/Failed-to-Create-AppDomain-in-Visual-Studio-2010.aspx"" rel=""nofollow"">codeproject.com</a> and the <code>Capsol</code> command was not found by the VS Command Line, and renaming the files didn't work either.</p>
+
+<p>So, today I decided to simply delete (backup first!) the folder <code>v2.0.50727</code> located into <code>#:\Documents and Settings\{user}\Application Data\Microsoft\CLR Security Config</code> and Voila! VS is debugging again.</p>
+",https://i.sstatic.net/bcWDB.jpg,2,Average Popular,Old
+3432891,"I want one image above the other. How can I do it? 
+
+http://twitpic.com/2cnpku
+",How to overlay an image over another image?,"['html', 'css', 'image']",8/8/2010 2:53,6781,3432896,2,"<p>Set the image you want on top to have a higher z-index. Right now, it has a lower z-index.</p>
+",https://i.sstatic.net/MWIHf.png,1,Average Popular,Old
+2224122,"I just started making games and I decided for my next project to use either flashdevelop or  flex builder. Reason being is because you can embed just about everything and for licensing purposes and it recommended the the game is compiled into one file. flex sdk is good with that type of stuff.
+As of right now I decided to use flashdevelop. but recently it's been kicking my behind. First I wasnt able to use ui class (e.i. buttons, and textboxes) probably because of something stupid I did. Now for some reason I can not compile my applications. When I compile, nothing happens, no errors, no nothing. below is a screenshot of what happens when I compile.
+Yes i installed debugger and yes I installed sdk
+
+So now I was thinking about just going with flex builder. Not sure which one is more easier to assemble and use. But I do know the flex builder community is bigger, and they have a much better documentation. I am good with actionscript, but I am not so good with using flex.
+My ultimate question is...
+Which one is easier to assemble
+which one is easier to use
+which one is BETTER overall
+",flashdevelop vs flex builder,"['apache-flex', 'flash', 'actionscript-3', 'actionscript']",2/8/2010 19:06,6496,2227109,4,"<p>as far as not compiling goes, looks like it compiled just fine.
+I don't know what you're expecting to see from the code other than the ""Hello""
+to see that open up your output window (under View)</p>
+
+<p>Whether you use flex or flashdevelop, you end up using the same compiler.</p>
+
+<p>Like Adam, I find flashdevelop easier to use than flex, but that's because I've used it more (flex trial expired and FD didn't)</p>
+
+<p>And plus I'm fast with FD, like really fast :)</p>
+
+<p>Try some of the shortcuts:</p>
+
+<ul>
+<li>to create getter and setter or
+generate function press 'ctrl shift ~' and PRESTO</li>
+<li>or for a for loop or for each loop type in the first few
+letters and press 'ctrl B'</li>
+<li>to find   instances of any string in code you
+can do F3 and shift F3, whereas F4
+will find the object or function
+declaration(even in separate files)</li>
+<li>FD also adds a lot of the classes as
+needed (sometimes I have to do it manually)</li>
+<li>and the latest version lets
+you generate classes which extend
+another class easier.</li>
+</ul>
+
+<p>I'm sure that flax does most of this as-well, but when you're already used to this then switching slows you down.</p>
+
+<p>I had the same issues when I started working with FD. What it boils down to is that flex has a bunch of libraries that it's using that FD doesn't unless you link to them, and sometimes even then.</p>
+
+<p>But once you start compiling your libraries and assets into SWCs you will be able to compile them through Flash and Flex. Which can be handy (like when you're working with other developers)</p>
+
+<p>FD doesn't have a profiler, but this has not prompted me to stop using it. When I need some debugging and trace isn't enough I add the demonsters debugger class: <a href=""http://www.monsterdebugger.com/"" rel=""nofollow noreferrer"">http://www.monsterdebugger.com/</a> it's pretty powerful, but you still can't step through your code.
+** Update - Flash Develop has had a profiler for a few versions now, It's good for watching memory use, but I still end up using monster debugger a lot. You can use debug in Flash Develop as-well and step through your code.**</p>
+
+<p>FD doesn't have the UI that flex does, and for developing mxml it is a bit more tedious, but at pure as3, I find FD is all I need. Well than and Flash to create my SWCs</p>
+",https://i159.photobucket.com/albums/t150/numerical25/delete-1.jpg,0,Average Popular,Old
+2777880,"I'm writing a crossplatform python script on windows using Eclipse with the Pydev plugin. The script makes use of the os.symlink() and os.readlink() methods if the current platform isn't NT.
+Since the os.symlink() and os.readlink() methods aren't available on the Windows platform Pydev flags them as undefined variables--like so:
+
+Question:
+Is there a way to ignore specific undefined variable name errors without modifying my source file?
+edit: I found a way to ignore undefined variable errors from this answer on stackoverflow.
+I'll leave the question open in case there is a way to solve this using project file or Pydev setting.
+",Howto ignore specific undefined variables in Pydev Eclipse,"['python', 'eclipse', 'ide', 'pydev']",5/6/2010 1:33,6252,2777984,3,"<p>I suspect pydev may have better, specific solutions, but what about just putting some code at the start of your program, such as:</p>
+
+<pre><code>if not hasattr(os, 'symlink'): os.symlink = None
+</code></pre>
+
+<p>Yeah, it's a hack, but, unless pydev <em>does</em> have specialized solutions (unfortunately I don't know of any, but then I'm no pydev expert;-), may be better than nothing...</p>
+",https://farm5.static.flickr.com/4030/4582418253_e3db0277ac_o.png,1,Average Popular,Old
+2303520,"I created a standard Java Project in Eclipse, placed a XML file in the src folder with the intent to grab it by Class#getResourceAsStream(), and I was baffled when Eclipse can't seem to locate the XML file in the classpath. After a little test it turns out that files with other extensions are perfectly located. 
+Here's a screen which says it all:
+
+It prints null for the /test.xml resource. The Class#getResourceAsStream() obviously doesn't make any difference.
+I checked the project's /bin folder and the XML file is indeed not there. I've checked all settings to see if there isn't some filter to exclude certain files from ending up in the /bin folder during the build, but all in vain.
+How is this caused and how can I solve it? I'm using Eclipse Galileo with build id 20090920-1017.
+",Eclipse doesn't put XML files in project's own buildpath,"['xml', 'eclipse', 'classpath']",2/20/2010 20:06,6245,2303549,1,"<p>This sounds vaguely familiar. Go to Prefs -> Java -> Compiler -> Building -> Output Folder, and make sure the ""filtered resources"" field doesn't include XML files.  Also check the project-specific preferences.</p>
+
+<p>I seem to recall that older versions of Eclipse had this in by default, but I'm not sure why it'd happen with a newer version.</p>
+",https://i.sstatic.net/2gLsw.png,2,Average Popular,Old
+1002459,"I use a modal popup extender, i followed all the instructions on the toolkit sample page, except that i didn't set the property BackgroundCssClass.
+this is what happens:
+
+Is there a way I can get rude of it without setting the cssclass prop?
+I don't need any styles.
+If the answer is NO then please show me an example how to set it with a cssclass (even dummy).
+Thanks in advance.
+Here is the code:
+<form id=""form1"" runat=""server"">
+<asp:ScriptManager ID=""ScriptManager1"" runat=""server"">
+</asp:ScriptManager>
+<div>
+    <div style=""size: 100%; vertical-align: middle"">
+        <asp:LinkButton ID=""lnkUpload"" Text=""Upload"" ToolTip=""Upload new file"" runat=""server"" OnClick=""lnkUpload_Click"" />
+        <cc1:ModalPopupExtender ID=""lnkUpload_ModalPopupExtender"" runat=""server"" Drag=""true"" PopupDragHandleControlID=""pnlUploadTitle"" DynamicServicePath="""" PopupControlID=""pnlUpload"" Enabled=""True"" TargetControlID=""lnkUpload"" CancelControlID=""btnCancel"" />
+    </div>
+    <asp:Panel ID=""pnlUploadTitle"" runat=""server"" Visible=""false"">
+        <center>
+            Upload file
+        </center>
+    </asp:Panel>
+    <asp:Panel ID=""pnlUpload"" runat=""server"" Visible=""false"">
+        <center>
+            <br />
+            <asp:FileUpload ID=""upFiles"" runat=""server"" /><br />
+            <br />
+            <asp:Button ID=""btnUpload"" runat=""server"" Text=""Upload"" OnClick=""btnUpload_Click"" />
+            &nbsp;<asp:Button ID=""btnCancel"" runat=""server"" Text=""Cancel"" />
+            <br />
+        </center>
+    </asp:Panel>
+</div>
+</form>
+
+","Ajax:ModalPopup js exception, BackgroundCssClass is null","['exception', 'ajaxcontroltoolkit', 'modalpopupextender', 'css']",6/16/2009 16:01,4802,1002856,3,"<p>You can set the ModalPopupExtender's backgroundCssClass within the actual HTML markup.</p>
+
+<p>Example from the asp.net modal popup page:</p>
+
+<pre><code>&lt;ajaxToolkit:ModalPopupExtender ID=""MPE"" runat=""server""
+TargetControlID=""LinkButton1""
+PopupControlID=""Panel1""
+**BackgroundCssClass=""modalBackground""** 
+DropShadow=""true"" 
+OkControlID=""OkButton"" 
+OnOkScript=""onOk()""
+CancelControlID=""CancelButton"" 
+PopupDragHandleControlID=""Panel3"" /&gt;
+</code></pre>
+",https://farm4.static.flickr.com/3322/3632160421_861d1f18e3_o.jpg,2,Average Popular,Old
+1469860,"I've started using Eclipe+PyDev as an environment for developing my first app for Google App Engine. Eclipse is configured according to this tutorial.
+Everything was working until I start to use memcache. PyDev reports the errors and I don't know how to fix it:
+
+Error: Undefined variable from import: get
+How to fix this?
+Sure, it is only PyDev checker problem. Code is correct and run on GAE.
+UPDATE:
+
+I'm using PyDev 1.5.0 but experienced the same with 1.4.8.
+My PYTHONPATH includes (set in Project Properties/PyDev - PYTHONPATH):
+
+
+C:\Program Files\Google\google_appengine
+C:\Program Files\Google\google_appengine\lib\django
+C:\Program Files\Google\google_appengine\lib\webob
+C:\Program Files\Google\google_appengine\lib\yaml\lib
+
+
+UPDATE 2:
+I took a look at C:\Program Files\Google\google_appengine\google\appengine\api\memcache\__init__.py and found get() is not declared as memcache module function. They use the following trick to do that (I didn't hear about such possibility):
+_CLIENT = None
+
+
+def setup_client(client_obj):
+  """"""Sets the Client object instance to use for all module-level methods.
+
+  Use this method if you want to have customer persistent_id() or
+  persistent_load() functions associated with your client.
+
+  Args:
+    client_obj: Instance of the memcache.Client object.
+  """"""
+  global _CLIENT
+  var_dict = globals()
+
+  _CLIENT = client_obj
+  var_dict['set_servers'] = _CLIENT.set_servers
+  var_dict['disconnect_all'] = _CLIENT.disconnect_all
+  var_dict['forget_dead_hosts'] = _CLIENT.forget_dead_hosts
+  var_dict['debuglog'] = _CLIENT.debuglog
+  var_dict['get'] = _CLIENT.get
+  var_dict['get_multi'] = _CLIENT.get_multi
+  var_dict['set'] = _CLIENT.set
+  var_dict['set_multi'] = _CLIENT.set_multi
+  var_dict['add'] = _CLIENT.add
+  var_dict['add_multi'] = _CLIENT.add_multi
+  var_dict['replace'] = _CLIENT.replace
+  var_dict['replace_multi'] = _CLIENT.replace_multi
+  var_dict['delete'] = _CLIENT.delete
+  var_dict['delete_multi'] = _CLIENT.delete_multi
+  var_dict['incr'] = _CLIENT.incr
+  var_dict['decr'] = _CLIENT.decr
+  var_dict['flush_all'] = _CLIENT.flush_all
+  var_dict['get_stats'] = _CLIENT.get_stats
+
+
+setup_client(Client())
+
+Hmm... Any idea how to force PyDev to recognize that?
+","Eclipse+PyDev+GAE memcache ""Undefined variable from import: get""","['python', 'eclipse', 'google-app-engine', 'pydev']",9/24/2009 5:12,4614,1469935,6,"<p>What version of PyDev are you using? A recent one (1.5) or the old one referred by the Google tutorial?<br>
+See <a href=""http://sourceforge.net/projects/pydev/forums/forum/293649/topic/3388818"" rel=""nofollow noreferrer"">this thread</a>.</p>
+
+<p>There is a similar <a href=""http://root.cern.ch/root/roottalk/roottalk09/0064.html"" rel=""nofollow noreferrer"">issue with PyROOT</a></p>
+
+<blockquote>
+  <p>Since PyDEV plugin does not read <code>$HOME/.pystartup</code>, touching functions/ classes is not a solution. Because it analyze the syntax and structures of python modules to be imported not on-the-fly but when I set the <code>PYTHONPATH</code> from Eclipse's preference panel. </p>
+</blockquote>
+
+<p>So does your <code>PYTHONPATH</code> reference the Google library?</p>
+
+<hr>
+
+<p>They might be an issue with code completion in 1.5 which could force you to disable code analysis: <a href=""http://sourceforge.net/tracker/index.php?func=detail&amp;aid=2855598&amp;group_id=85796&amp;atid=577329"" rel=""nofollow noreferrer"">Pydev 1.5.0 code anlaysis breaks code pyqt4 code completion - ID: 2855598</a></p>
+
+<blockquote>
+  <p>have <code>pyqt 4.5.4</code> installed.<br>
+  Initially I had <code>pydev 1.4.8</code> the open source version installed and code completion worked fine.<br>
+  After updating to pydev 1.5.0, pyqt code completion stopped functioning.<br>
+  After disabling the Pydev code analysis in <strong><code>""eclipse preferences -&gt; pydev -&gt; editor -&gt; code analysis -&gt; do code analysis?""</code></strong>, code completion began working again for PyQt
+  classes etc.</p>
+</blockquote>
+",https://web.archive.org/web/20140313064839/http://www.freeimagehosting.net/uploads/fc176c0957.png,2,Average Popular,Old
+3290319,"i am having trouble deciphering this block of code from doctrine documentation
+/** @Entity */
+class User
+{
+    // ...
+
+    /**
+     * @ManyToMany(targetEntity=""User"", mappedBy=""myFriends"")
+     */
+    private $friendsWithMe;
+
+    /**
+     * @ManyToMany(targetEntity=""User"", inversedBy=""friendsWithMe"")
+     * @JoinTable(name=""friends"",
+     *      joinColumns={@JoinColumn(name=""user_id"", referencedColumnName=""id"")},
+     *      inverseJoinColumns={@JoinColumn(name=""friend_user_id"", referencedColumnName=""id"")}
+     *      )
+     */
+    private $myFriends;
+
+    // ...
+}
+
+below is how i decipher a one to many bidirectional relationship
+
+(source: tumblr.com) 
+but if i use the same method, ... below is what i get
+alt text http://img514.imageshack.us/img514/2918/snagprogram0000.png
+UPDATE
+i shld clarify my question. basically, i dont understand how is the opposite of myFriends, friendsWithMe. how i shld make sense of this code and more importantly know how to code such relationships myself. 
+",Need help understanding Doctrine many to many self referencing code,"['php', 'orm', 'doctrine', 'doctrine-orm']",7/20/2010 13:19,4497,3298277,2,"<p>i give a try at answering my question, i am still quite blur with this, hope someone can really give a better answer, </p>
+
+<p><strong>so 1st to answer the question abt how do i derive with <code>$friendsWithMe</code></strong></p>
+
+<p>basically, i started off with ""decoding"" a simpler, more common, many to many bidirectional relationship. </p>
+
+<ul>
+<li>1 user can be in many groups
+
+<ul>
+<li>$user->groups</li>
+</ul></li>
+<li>1 group can have many users
+
+<ul>
+<li>$group->users</li>
+</ul></li>
+</ul>
+
+<p>very straight forward. but how does this make sense in SQL? </p>
+
+<p><img src=""https://farm5.static.flickr.com/4115/4814734734_7e25414308_b.jpg"" alt=""alt text""></p>
+
+<p>code to implement</p>
+
+<pre><code># select groups user is in
+select group_id from users_groups
+where user_id = 1
+
+#select users of group
+select user_id from users_groups
+where group_id = 1
+</code></pre>
+
+<p>now to the actual model ... in SQL</p>
+
+<p><img src=""https://farm5.static.flickr.com/4121/4814728024_6a86f67930.jpg"" alt=""alt text""></p>
+
+<p>in code </p>
+
+<pre><code># select friends of given user
+# $user-&gt;myFriends
+select friend_id from friends
+where user_id = 1;
+
+# select users that are friends of given user
+# $user-&gt;friendsWithMe
+select user_id from friends
+where friend_id = 1;
+</code></pre>
+
+<p>ah ha! <strong>select users that are friends of given user</strong>. so this is how i get <code>$friendsWithMe</code>. then to fill up the <code>inversedBy</code> &amp; <code>mappedBy</code> &amp; the rest of the class?</p>
+
+<p>1st look at the bottom note. </p>
+
+<p><img src=""https://farm5.static.flickr.com/4095/4814338717_a95748d80d_b.jpg"" alt=""alt text""></p>
+
+<p>not clear without so much and deep thinking, abt 2 days. i guess </p>
+
+<p><strong>then as practice how do i create a many to many self referencing relationship from scratch?</strong> </p>
+
+<p>the example i am going to work on is... hmm, quite crappy i think but, i'll try :) ... 1 user/student can have many teachers. 1 teacher can have many users/students. 1 user can be a teacher and student here. u know like in forums such as these, when u answer someones questions, you are a teacher. when u ask, u are a student</p>
+
+<p>the ERD will look like </p>
+
+<p><img src=""https://farm5.static.flickr.com/4136/4814407061_be7dd37d25.jpg"" alt=""alt text""></p>
+
+<p>some code to select, students of teachers, teachers of students</p>
+
+<pre><code># select students of teacher
+# $teacher-&gt;students
+select student from teacher_student 
+where teacher = 1;
+
+# select teachers of student
+# $student-&gt;teachers
+select teacher from teacher_student
+where student = 2;
+</code></pre>
+
+<p>ok, the doctrine part? </p>
+
+<pre><code>/** @Entity @Table(name=""users"")) */
+class User {
+    /**
+     * @Id @Column(type=""integer"")
+     * @GeneratedValue(strategy=""AUTO"")
+     */
+    private $id;
+    /**
+     * @Column(type=""string"", length=""30"")
+     */
+    private $name;
+    /**
+     * @ManyToMany(targetEntity=""User"", inversedBy=""teachers"")
+     * @JoinTable(name=""Teachers_Students"",
+     *              joinColumns={@JoinColumn(name=""teacher"", referencedColumnName=""id"")},
+     *              inverseJoinColumns={@JoinColumn(name=""student"", referencedColumnName=""id"")}
+     *              )
+     */
+    private $students;
+    /**
+     * @ManyToMany(targetEntity=""User"", mappedBy=""students"")
+     */
+    private $teachers;
+}
+</code></pre>
+
+<p>which generated this tables for me</p>
+
+<pre><code># users
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+#teachers_students
+CREATE TABLE `teachers_students` (
+  `teacher` int(11) NOT NULL,
+  `student` int(11) NOT NULL,
+  PRIMARY KEY (`teacher`,`student`),
+  KEY `student` (`student`),
+  CONSTRAINT `teachers_students_ibfk_2` FOREIGN KEY (`student`) REFERENCES `users` (`id`),
+  CONSTRAINT `teachers_students_ibfk_1` FOREIGN KEY (`teacher`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+</code></pre>
+
+<p>at last i done it! lets test it ... erm i am getting </p>
+
+<blockquote>
+  <p>Fatal error: Class 'Entities\User' not
+  found in
+  D:\ResourceLibrary\Frameworks\Doctrine\tools\sandbox\index.php
+  on line 61</p>
+</blockquote>
+
+<p>when i try to do a </p>
+
+<pre><code>$user = new User;
+</code></pre>
+
+<p>zzz ... </p>
+
+<p>i have also blogged abt this question and my explaination on my <a href=""http://tumblr.com/xfzdw66z1"" rel=""nofollow noreferrer"">tumblr</a></p>
+",https://i.sstatic.net/ed6bi.png,0,Average Popular,Old
+794128,"I am trying to create a general method for disposing an object that implements IDisposable, called DisposeObject()
+To make sure I am disposing an object pointed by original reference, I am trying to pass an object by reference.
+But I am getting a compilation error that says
+
+The 'ref' argument type doesn't match parameter type
+
+In the below (simplified) code, both _Baz and _Bar implement IDisposable.
+
+So the questions are,
+
+Why am I getting this error?
+Is there a way to get around it?
+
+[UPDATE]
+From provided answers so far, as long as I do not set an IDisposable argument to null, I can simply pass an object by value without using ref.
+I am now having another trouble whether to set disposable objects to null or not within DisposeObject method.  
+Here is the full source for completeness:
+public class Foo : IDisposable
+{
+    private Bar _Bar;
+    private Baz _Baz;
+    private bool _IsDisposed;
+
+    ~Foo() { Dispose(false); }
+
+    public void Dispose(bool disposing)
+    {
+        if (!_IsDisposed)
+        {
+            if (disposing)
+            {
+                DisposeObject(ref _Baz);
+                DisposeObject(ref _Bar);
+            }
+        }
+
+        _IsDisposed = true;
+    }
+
+    private void DisposeObject(ref IDisposable obj)
+    {
+        try
+        {
+            if (obj == null) 
+                return;
+            obj.Dispose();
+            obj = null;
+        } catch (ObjectDisposedException) { /* Already Disposed... */ }
+    }
+
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+}
+
+public class Bar : IDisposable
+{
+    public void Dispose() {}
+}
+
+public class Baz : IDisposable
+{
+    public void Dispose() {}
+}
+
+[RESULT] 
+I removed the code that sets argument to null (obj = null;) within DisposeObject
+So the final code became.
+    public void Dispose(bool disposing)
+    {
+        if (!_IsDisposed)
+        {
+            if (disposing)
+            {
+                DisposeObject(_Baz);
+                DisposeObject(_Bar);
+            }
+        }
+
+        _IsDisposed = true;
+    }
+
+    private void DisposeObject(IDisposable obj)
+    {
+        try
+        {
+            if (obj == null) 
+                return;
+            obj.Dispose();
+        } catch (ObjectDisposedException) { /* Already Disposed... */ }
+    }
+
+",Passing an IDisposable object by reference causes an error?,"['c#', 'dispose', 'idisposable', 'pass-by-reference']",4/27/2009 15:47,4448,794154,5,"<p>There is no need for you to pass by reference, as you're passing a reference type. You should remove the <code>ref</code> keyword from your method definition. Do this and you shouldn't have any issues, though I'm not sure how this is more effective or clearer than simply calling <code>Dispose()</code> (other than the fact that you don't have to cast it for explicit implementations and this does a <code>null</code> check for you).</p>
+
+<p><strong>Edit</strong></p>
+
+<p>Dance, while I hope the discussion that's surrounded this topic has been helpful to you, your original intent doesn't seem to be something that's doable. In order to pass something as <code>ref</code>, you can't pass a variable that has a type other than what the <code>ref</code> parameter expects (in other words, you can't pass a variable declared as a <code>class</code> or other <code>interface</code> that implements <code>IDisposable</code> if the <code>ref</code> parameter is <code>IDisposable</code>). Because <code>ref</code> parameters allow assignments to propagate back to the caller, you would open up the possibility of allowing incompatible types being stored in your variable.</p>
+
+<p>Your best bet here is to assign <code>null</code> yourself if that's what you want. If you want to encapsulate the <code>null</code> check and ignoring exceptions in to the function that's fine, but <code>ref</code> will not work for you in this scenario no matter how you slice it, unfortunately.</p>
+",https://farm4.static.flickr.com/3576/3479637489_d92cf9f406_o.png,2,Average Popular,Old
+2418272,"i have bit of code that causes an underflow:
+var
+    t1, t2, delta: DWORD:
+begin
+   t1 := 0xffffff00;
+   t2 := 0x00000037;
+
+   delta := (t2 - t1);
+
+The subtraction itself does generate an overflow (underflow), but i don't want Delphi to throw an EIntOverflow exception. So i try disabling the generation of overflow checking code by disabling overflow checking:
+var
+    t1, t2, delta: DWORD:
+begin
+   t1 := 0xffffff00;
+   t2 := 0x00000037;
+
+{$OVERFLOWCHECKS OFF}
+   delta := (t2 - t1);
+{$OVERFLOWCHECKS ON}
+
+Yet even with the OVERFLOWCHECKS OFF option, it still throws an exception. And the generated code still contains the check:
+
+
+A reminder of the documentation on $Q:
+
+Overflow checking
+Type Switch
+Syntax {$Q+} or {$Q-}
+      {$OVERFLOWCHECKS ON} or {$OVERFLOWCHECKS OFF}
+Default {$Q-}
+            {$OVERFLOWCHECKS OFF}
+Scope Local  
+Remarks 
+The $Q directive controls the
+  generation of overflow checking code.
+  In the {$Q+} state, certain integer
+  arithmetic operations (+, -, *, Abs,
+  Sqr, Succ, Pred, Inc, and Dec) are
+  checked for overflow. The code for
+  each of these integer arithmetic
+  operations is followed by additional
+  code that verifies that the result is
+  within the supported range. If an
+  overflow check fails, an EIntOverflow
+  exception is raised (or the program is
+  terminated if exception handling is
+  not enabled).
+The $Q switch is usually used in
+  conjunction with the $R switch, which
+  enables and disables the generation of
+  range-checking code. Enabling overflow
+  checking slows down your program and
+  makes it somewhat larger, so use {$Q+}
+  only for debugging.
+
+How do i use $OVERFLOWCHECKS OFF to disable the generation of overflow checking code?
+
+Mason's answer worked. The revised code is:
+var
+    t1, t2, delta: DWORD:
+begin
+   t1 := 0xffffff00;
+   t2 := 0x00000037;
+
+   delta := Subtract(t2, t1);
+
+
+{$OVERFLOWCHECKS OFF}
+function Subtract(const B, A: DWORD): DWORD; //subtract B-A
+begin
+   {
+      Disabling overflow checking does not work at the line level,
+      only the routine level. 
+      Hence the function to subtract two numbers.
+   }
+   Result := (B-A);
+end;
+{$OVERFLOWCHECKS ON}
+
+For google crawler, alternate question phrasing: How to temporarily disable overflow checking in Delphi?
+",Delphi: How do i use $OVERFLOWCHECKS OFF to disable overflow checks?,"['delphi', 'delphi-5', 'integer-overflow']",3/10/2010 15:49,4287,2418339,1,"<p>It doesn't work at the line level.  You need to turn it off for the entire function.</p>
+",https://i.sstatic.net/ytGgY.png,1,Average Popular,Old
+3799238,"I've seen a slide that presented Fab, a node.js framework.
+
+Is this JavaScript?
+Could someone explain what is going on in that code?
+I'm all lost.
+",Javascript FAB framework on Node.js,"['javascript', 'node.js', 'chaining', 'floating-action-button']",9/26/2010 18:32,3701,3799269,2,"<p>Is plain JavaScript, it is a <em>function chaining</em> pattern.</p>
+
+<p>The first line, <code>( fab = require(""fab"") )</code> includes the <code>fab</code> function and returns a reference to it.</p>
+
+<p>All the subsequent parentheses are function calls, each function invocation returns probably the same function again and again.</p>
+
+<p>The pattern probably looks like this simplified example:</p>
+
+<pre><code>var foo = function (arg) {
+  // detect what the argument is
+  if (typeof arg == 'function') {
+    // do something with arg
+    console.log('function: '+arg());
+  } else if (arg instanceof RegExp) {
+    // arg is a RegExp...
+    console.log('A RegExp: '+arg);
+  } else if (typeof arg == ""string"") {
+    // arg is a string
+    console.log('A string: '+arg);
+  }
+  return foo; // return a reference to itself
+};
+
+(foo)
+  (function() { return ""Foo ""; })
+  (/bar/)
+  ("" baz!"");
+</code></pre>
+
+<p>Outputs:</p>
+
+<pre>
+function: Foo
+A RegExp: /bar/
+A string: baz!
+</pre>
+",https://i.sstatic.net/4KIEI.png,0,Average Popular,Old
+2753904,"Visual Studio is one of the best developer IDE of all times, and now was improved with multithreading debugging and much more.
+My question is regarding Xcode and the ability to execute code just like we do in Visual Studio.
+Let's assume an object in a view and I want to run, let's say:
+[pickerView setHidden:YES];
+
+in a breakpoint just to see if in that break point I could actually hide the object.
+I can't find any place for this in the XCode Debugger
+alt text http://cl.ly/uLs/Screen_shot_2010-05-02_at_17.17.34.png
+Am I missing something or I can't execute code that is not in the files already? like in Visual Studio Watch List or Immediate Window
+
+",Can we execute methods / code in XCcode just like in Visual Studio?,"['xcode', 'debugging']",5/2/2010 15:19,3575,2753961,1,"<p>Yes, you can do this using gdb commands. Edit your break-point, then add a ""Breakpoint Action"" by pressing the plus icon under your breakpoint in the ""Breakpoints"" window. Select ""Debugger Command"" from the action type drop-down menu, then type in your command (without the semi-colon). Note that what you can enter here is gdb, not straight Objective-C, so some things won't work as you might expect (such as dot-notation).</p>
+
+<p>You can also type in gdb commands in the Debugger Console while the debugger (gdb) is paused, so you can set a breakpoint, type in a command, then hit continue to see if it did what you were expecting.</p>
+",https://i.sstatic.net/zjk6B.png,1,Average Popular,Old
+2768135,"SQL Server doesn't allow creating an view with schema binding where the view query uses OpenQuery as shown below.
+
+Is there a way or a work-around to create an index on such a view?
+",Creating an index on a view with OpenQuery,"['sql-server', 't-sql', 'indexing', 'query-optimization']",5/4/2010 18:54,3537,2768338,3,"<p>The best you could do would be to schedule a periodic export of the AD data you are interested in to a table.</p>
+
+<p>The table could of course then have all the indexes you like. If you ran the export every 10 minutes and the possibility of getting data that is 9 minutes and 59 seconds out of date is not a problem, then your queries will be lightning fast.</p>
+
+<p>The only part of concern would be managing locking and concurrency during the export time. One strategy might be to export the data into a new table and then through renames swap it into place. Another might be to use SYNONYMs (SQL 2005 and up) to do something similar where you just point the SYNONYM to two alternating tables.</p>
+
+<p>The data that supplies the query you're performing comes from a completely different system outside of SQL Server. There's no way that SQL Server can create an indexed view on data it does not own. For starters, how would it be notified when something had been changed so it could update its indexes? There would have to be some notification and update mechanism, which is implausible because SQL Server could not reasonably maintain ACID for such a distributed, slow, non-SQL server transaction to an outside system.</p>
+
+<p>Thus my suggestion for mimicking such a thing through your own scheduled jobs that refresh the data every X minutes.</p>
+
+<p>--Responding to your comment--</p>
+
+<p>You can't tell whether a new user has been added without querying. If Active Directory supports some API that generates events, I've never heard of it.</p>
+
+<p>But, each time you query, you could store the greatest creation time of all the users in a table, then through dynamic SQL, query only for new users with a creation date after that. This query should theoretically be very fast as it would pull very little data across the wire. You would just have to look into what the exact AD field would be for the creation date of the user and the syntax for conditions on that field.</p>
+
+<p>If managing the dynamic SQL was too tough, a very simple vbscript, VB, or .Net application could also query active directory for you on a schedule and update the database.</p>
+",https://farm5.static.flickr.com/4057/4578607067_81cb667bd4_o.png,2,Average Popular,Old
+1600431,"Normally Eclipse 'File Compare' compares files in vertical panels like:
+
+Is there a way I can compare them horizontally like:
+Compare using Horizontal Panel http://www.sqlservertool.com/images/ad_hex_diff_small.gif
+Its too tiring to scroll everytime to see what was changed!!
+Thx
+",Eclipse (3.5) how to compare files horizontally?,"['eclipse', 'compare', 'filecompare', 'file-comparison']",10/21/2009 12:15,3455,1600987,5,"<p>Looking at the code of <a href=""http://kickjava.com/src/org/eclipse/compare/internal/CompareEditor.java.htm"" rel=""noreferrer""><code>org.eclipse.comparator.internal.CompareEditor</code></a> (which is the name of the class of the editor illustrated in your question), I do not see any indication of a different ""orientation"" (horizontal layout vs. vertical layout)</p>
+
+<p>So, no. I do not think the current implementation allows you to compare files with a different layout.</p>
+",https://rubenlaguna.com/wp/wp-content/uploads/2007/08/comparebefore.png,1,Average Popular,Old
+3525983,"i want to add a SWF metadata tag to an ActionScript Project in Flash Builder 4, that denotes the default size and background color of the swf.
+i can do this in Flash Professional, but it doesn't work with ActionScript projects in FB4?  can i not include this tag?  i know i can set these properties in the properties panel, but i'd like to have them in my code.
+
+",Coded SWF Properties in Flash Builder 4,"['actionscript-3', 'apache-flex', 'metadata', 'flash-builder', 'flexbuilder']",8/19/2010 20:35,3388,3526185,2,"<p>oh, never mind.  dumb move on my part.  this metadata tag needs to be place just before the class declaration.  </p>
+
+<pre><code>[SWF(width=""1800"", height=""600"", frameRate=""60"", backgroundColor=""#0"")]
+public class Test extends Sprite
+     {
+     ...
+     }
+</code></pre>
+",https://i.sstatic.net/4l28F.png,2,Average Popular,Old
+2097678,"I just ran into one of the most mind boggling errors ever.  false == true  What information would you guys need to confirm/debug this behavior?  I've never seen anything like it.
+
+
+VS2008 sp1 
+Debug Mode | Any Cpu
+IIS 7.5
+
+Edit:
+I did a clean->rebuild and still the same.
+Here's the assembly and registers. I don't know how to read this, but maybe it could help someone else.
+",C# How can false == true ? See Picture,"['c#', 'visual-studio', 'debugging']",1/19/2010 22:31,2987,2097688,8,"<p>I suppose your PDB files are not in phase and you have differences in what's really executed and what Visual Studio sees as a line number. Try rebuilding. We all know that it is impossible to have <code>true = false</code>, or the world as we know it may change :-)</p>
+",https://i.sstatic.net/eFqMq.png,0,Average Popular,Old
+1319967,"I have a factory class, DocumentLoaderFactory, which simply returns an instance that implements an interface, IDocumentLoader.
+All implementation resides under the following namespace
+
+Skim.Ssms.AddIn.ActiveFileExplorer.Loader
+
+But what I am wondering is, which namespace does DocumentLoaderFactory belong?
+I have placed the factory class under the *.Loader namespace for now, but it is being used from a user control (ActiveFileWindow) of the parent namespace, Skim.Ssms.AddIn.ActiveFileExplorer as shown below.
+What would be pros & cons of placing the factory method within *.Loader or it's parent namespace?  I would like to make a decision depending on pros/cons.
+
+
+Here is the layout of my project
+
+",Which namespace does a factory class belong?,"['design-patterns', 'oop', 'refactoring', 'factory']",8/24/2009 0:25,2967,1319979,3,"<p>I would say its best to colocate your factories with the type(s) they create. A factory is a provider of something, and should be associated and proximate to the things it provides. If you follow the rules of cohesion, then you would come to the same conclusion. Related things should be close together to maintain a cohesive API.</p>
+",https://farm4.static.flickr.com/3497/3849884013_c1f1cf495c_o.png,0,Average Popular,Old
+2682079,"I'm new to emacs and I want to use ensime in Windows.
+I had a try but it doesn't work. It seems that it doesn't work because there is a *nix format file named ""\ensime\bin\server.sh"" .
+Very appreciate if someone give me some tips. 
+EDIT:
+I follow VonC's suggestion but it doesn't work perfect. I'm sure I have missed something.
+
+I have installed emacs23.1 in dir D:\Dev\emacs-23.1 ,scala-mode in D:\Dev\emacs-23.1\scala-mode and ensime in D:\Dev\emacs-23.1\ensime.
+Here is my .emacs file content:
+;;禁用工具栏
+(tool-bar-mode nil)
+
+;;显示行号
+(global-linum-mode t)
+
+;;使用scala mode
+(add-to-list 'load-path ""D:/Dev/emacs-23.1/scala-mode/"")
+(require 'scala-mode)
+
+(add-to-list 'auto-mode-alist '(""\\.scala$"" . scala-mode))
+(add-to-list 'load-path ""D:/Dev/emacs-23.1/ensime/src/elisp/"")
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+
+
+and here is my D:\Dev\emacs-23.1\ensime.ensime file content:
+(
+:server-root ""D:/Dev/emacs-23.1/ensime/""
+:server-cmd  ""D:/Dev/emacs-23.1/ensime/bin/server.bat""
+:server-host ""localhost""
+:server-env ()
+
+:project-package ""com.ensime""
+:source (""src"")
+:exclude-source ()
+:classpath (""lib/jnotify/jnotify-0.93.jar""
+        ""lib/scala/scala-library.jar""
+        ""lib/scala/scala-compiler.jar"")
+)
+
+
+and here is my D:\Dev\emacs-23.1\ensime\bin\server.bat file content:
+@echo off
+set PORT_FILE=%1
+set CLASSPATH=D:\Dev\emacs-23.1\ensime\lib\jnotify\jnotify-0.93.jar;D:\Dev\emacs-23.1\ensime\lib\scala\scala-library.jar;D:\Dev\emacs-23.1\ensime\lib\scala\scala-compiler.jar;D:\Dev\emacs-23.1\ensime\dist\ensime.jar
+java -classpath %CLASSPATH% -Djava.library.path=D:\Dev\emacs-23.1\ensime\lib\jnotify com.ensime.server.Server %PORT_FILE%
+
+alt text http://www.turboimagehost.com/p/3350328/3769883.PNG.html
+",How to make ensime work in windows?,"['scala', 'ensime']",4/21/2010 10:30,2845,2682103,3,"<p>It should be a simple matter of porting the shell script in DOS in a <code>server.bat</code>:</p>
+
+<pre><code>@echo off
+set PORT_FILE=%1
+set CLASSPATH=lib\scala\scala-library.jar;lib\scala\scala-compiler.jar;dist\ensime.jar
+java -classpath %CLASSPATH% -Djava.library.path=lib\jnotify com.ensime.server.Server %PORT_FILE%
+</code></pre>
+
+<p>to be executed from the ensime directory.</p>
+
+<p>a more independent version (executable from any directory) would be:</p>
+
+<pre><code>@echo off
+set t=%~dp0
+set adp0=%t::\=:\""%""
+cd %adp0%..
+set CLASSPATH=lib\scala\scala-library.jar;lib\scala\scala-compiler.jar;dist\ensime.jar
+java -classpath %CLASSPATH% -Djava.library.path=lib\jnotify com.ensime.server.Server %PORT_FILE%
+</code></pre>
+
+<p>Even if <code>ensime</code> is in a path with spaces in it, it should work.</p>
+
+<ul>
+<li><code>%~dp0</code> is the full path of the server.bat (path with potential spaces in it)</li>
+<li><code>set adp0=%t::\=:\""%""</code> will add double quotes around that path</li>
+<li><code>%adp0%..</code> will refer to the <code>ensime</code> directory</li>
+</ul>
+",https://s1d2.turboimagehost.com/sp/bfe46ea4efc2ab3a470d3c3d15703905/3769883.PNG,1,Average Popular,Old
+3511130,"Is it possible to mock the enterprise library 5 version of 'Database'? If so... how?
+There is no IDatabase interface (which is a mystery as I though Microsoft P&P would be more on the ball about testability benefits of exposing such an interface).
+I have a Repository class which used EntLib 5 Data Access Application Block.
+I am retro fitting unit tests into this class and need to mock out the dependency on the Database object. This class is now passed the Database via its constructor and uses a Database object to perform operations on the Db. 
+I use the following to resolve an instance of the Database to be passed to my Repository:
+Container.RegisterType<IFooRepository, FooRepository>(
+    new InjectionConstructor(
+        EnterpriseLibraryContainer.Current.GetInstance<Database>(""FooDbConnStr"")
+    )
+);
+
+I don't wish these unit tests to become integration tests.
+I have tried using Moq to create a dynamic mock of the Database type, but this has proved tricky as Database requires a connection string and a DbProviderFactory in its constructor.  Maybe if there was such a thing as a MockDbProviderFactory.
+This is the form that the unit test is taking:
+
+Aside: I also find the use of a static logger class very difficult to test. Hopefully I am missing some trick here, but I must say I am disappointed with testability thus far.
+",Mocking Enterprise Lib 5 'Database',"['c#', 'unit-testing', 'enterprise-library']",8/18/2010 10:34,2620,3512702,4,"<p>I used FakeItEasy <a href=""http://code.google.com/p/fakeiteasy/"" rel=""nofollow noreferrer"">http://code.google.com/p/fakeiteasy/</a>.</p>
+
+<p>I created a mock of SqlDatabase (inherits from Database with a friendlier constructor) passed it to the FooRepostory, called the function under test and asserted expected calls that were made to the Database.</p>
+
+<pre><code>[Test]
+public void FooRepo_CallsCorrectSPOnDatabase()
+{
+    var mockDb = A.Fake&lt;SqlDatabase&gt;(x =&gt; x.WithArgumentsForConstructor(new object[] { ""fakeconnStr"" }));
+    var sut = new FooRepository(mockDb);
+    sut.LoadFoosById(1);
+    A.CallTo(() =&gt; mockDb.GetStoredProcCommand(Db.SProcs.GetFoosById)).MustHaveHappened(Repeated.Once);
+}
+</code></pre>
+",https://i.sstatic.net/7mgLy.jpg,1,Average Popular,Old
+2753559,"I create a Silverlight Chart, with the Silverlight 4 toolkit, the April release.
+Consider the following chart:
+ <Grid x:Name=""LayoutRoot"" Background=""White"">
+  <Charting:Chart Title=""Chart to test"" Name=""MySuperChart"">
+   <Charting:LineSeries x:Name=""MyLineSeries"" Title=""Something"" />
+  </Charting:Chart>
+ </Grid>
+
+So far so good. I can access the Series in the chart by MySuperChart.Series[0] But when I try to reference MyLineSeries, it appears to be null.
+
+Full view
+","Silverlight 4 toolkit, charting and lineSeries is null","['silverlight', 'charts', 'silverlight-toolkit']",5/2/2010 13:17,2585,2757381,1,"<p>This is an interesting little gotcha.  It helps if you look a bit under the hood at how the variable <code>MyLineSeries</code> is created and assigned.  Navigate to the definition of the <code>InitializeComponent</code> method.  You will end up at the MainPage.g.cs generated file.  It will contain this field:-</p>
+
+<pre><code>internal System.Windows.Controls.DataVisualization.Charting.LineSeries MyLineSeries;
+</code></pre>
+
+<p>and in the <code>InitializeComponent</code> you will find this line:-</p>
+
+<pre><code>this.MyLineSeries = ((System.Windows.Controls.DataVisualization.Charting.LineSeries)(this.FindName(""MyLineSeries"")));
+</code></pre>
+
+<p>So on the surface of it by the time the call to <code>InitializeComponent</code> in your constructor has completed the <code>MyLineSeries</code> should have been assigned a value.  However as you can see its still null, hence it can be concluded that <code>FindName(""MyLineSeries"")</code> failed to find the series.  So the question is why did it fail?</p>
+
+<p><strong>Why Doesn't FindName Work?</strong></p>
+
+<p><code>FindName</code> searches what is refered to in the documentation as the ""object tree"", looking for an object that has the name specified (there are added complications of what are known as namescopes but that is not at play here).  Typically objects end up in the ""object tree"" through common base types like <code>Panel</code> or <code>ContentControl</code> which have propeties such as <code>Children</code> and <code>Child</code> respectively.  These properties are specified in the <code>ContentProperty</code> attribute on the classes which allows for the UI structure to be described more naturally.  E.g.:-</p>
+
+<pre><code>&lt;Button x:Name=""MyButton""&gt;
+  &lt;Image x:Name=""MyImage"" ... /&gt;
+&lt;/Button&gt;
+</code></pre>
+
+<p>Instead of </p>
+
+<pre><code>&lt;Button x:Name=""MyButton""&gt;
+  &lt;Button.Child&gt;
+    &lt;Image x:Name=""MyImage"" ... /&gt;
+  &lt;/Button.Child&gt;
+&lt;/Button&gt;
+</code></pre>
+
+<p>The <code>Chart</code> control, on the other hand, is not a simple <code>Panel</code> derivative and has a lot more work to do to build its UI.  In the case of the <code>Chart</code> the <code>ContentPropertyAttribute</code> specifies the <code>Series</code> collection parameter.  This allows your more natural Xaml:-</p>
+
+<pre><code>&lt;Charting:Chart Title=""Chart to test"" Name=""MySuperChart""&gt;
+  &lt;Charting:LineSeries x:Name=""MyLineSeries"" Title=""Something"" /&gt;
+&lt;/Charting:Chart&gt;
+</code></pre>
+
+<p>However because <code>Chart</code> has a lot of extra work in order do determine what exactly should be in the ""object tree"" that will represent its final UI the series collection items don't immediately become part of the ""object tree"".  As result the <code>FindName</code> in the <code>InitializeComponent</code> simply doesn't find them.</p>
+
+<p><strong>Work Around - Option 1</strong></p>
+
+<p>You could use your knowledge of the ordinal position of ""MyLineSeries"" in the chart to handle the assignment of a <code>MyLineSeries</code> variable in the constructor.  Remove the <code>x:Name=""MyLineSeries""</code> from the Xaml then in code:-</p>
+
+<pre><code>public partial MainPage : UserControl
+{
+  private LineSeries MyLineSeries;
+
+  public MainPage()
+  {
+    InitializeComponent();
+    MyLineSeries = (LineSeries)MySuperChart.Series[0];
+  }
+}
+</code></pre>
+
+<p><strong>Work Around - Option 2</strong></p>
+
+<p>You could wait until the series is available in the ""object tree"" which is true once the containing <code>UserControl</code> has fired its <code>Loaded</code> event:-</p>
+
+<pre><code>public partial MainPage : UserControl
+{
+  public MainPage()
+  {
+    InitializeComponent();
+    Loaded += (s, args) =&gt;
+    {
+      MyLineSeries = (LineSeries)FindName(""MyLineSeries"");
+    }
+  }
+}
+</code></pre>
+",https://i.sstatic.net/OJwDt.jpg,2,Average Popular,Old
+633251,"This is a snippet of my code. 
+Declare Function ReadProcessMemory Lib ""kernel32"" _
+                              (ByVal hProcess As Long, _
+                              ByVal lpBaseAddress As Long, _
+                              lpBuffer As Any, _
+                              ByVal nSize As Long, _
+                              lpNumberOfBytesRead As Long) As Long
+
+Dim bytearray As String * 65526
+Dim GetWindowsFormsID
+
+ReadProcessMemory(processHandle, bufferMem, ByVal bytearray, size, lp)
+GetWindowsFormsID = ByteArrayToString(bytearray, retLength)
+
+Function ByteArrayToString(bytes As String, length As Long) As String
+    Dim retValStr As String
+    Dim l As Long
+    retValStr = String$(length + 1, Chr(0))
+    l = WideCharToMultiByte(CP_ACP, 0, bytes, -1, retValStr, length + 1, Null, Null)
+    ByteArrayToString = retValStr
+End Function
+
+I got '94 null' error while calling WideCharToMultiByte. But I'm sure bytes is not empty.
+
+Is this the exact procedure to convert this output into String?
+",How to get string from the output of ReadProcessMemory,"['vb6', 'readprocessmemory']",3/11/2009 3:41,2562,633382,1,"<p>OK, this is solved (and also <a href=""https://stackoverflow.com/questions/591250/how-can-i-automate-winforms-in-net"">this question</a>). The issue is actually convert WideChar string into ANSI string. I use CopyMemory instead of WideCharToMultiByte.</p>
+
+<pre><code>Public Declare Sub CopyMemory Lib ""kernel32"" Alias ""RtlMoveMemory"" (Destination As Any, Source As Any, ByVal Length As Long)
+
+Function ByteArrayToString(bytes As String, Length As Long) As String
+    Dim retValStr As String
+    retValStr = String(Length - 1, Chr$(0))
+    CopyMemory ByVal StrPtr(retValStr), ByVal bytes, Length * 2
+    ByteArrayToString = retValStr
+End Function
+</code></pre>
+",https://farm4.static.flickr.com/3322/3346099164_d9ab874e80_o.jpg,1,Average Popular,Old
+1877103,"I would like to have vc-diff colorize the output so that added lines are in one color and deleted ones in another. Using Emacs 23.1 and putty/xterm-256color (list-colors-display shows 256 colors and color themes and such works as expected).
+This is how it looks right now:
+
+
+",How can I get more colors in emacs vc-diff?,"['emacs', 'colors', 'version-control', 'emacs23']",12/9/2009 21:41,2330,1877253,2,"<p>The package <a href=""http://www.emacswiki.org/emacs/diff-mode-.el"" rel=""nofollow noreferrer""><code>diff-mode-.el</code></a> provides more colors.</p>
+
+<p>You can customize the colors by either <a href=""http://www.emacswiki.org/emacs/CustomizingFaces"" rel=""nofollow noreferrer"">customizing the faces</a> <code>diff-indicator-removed</code> and <code>diff-indicator-added</code>, or changing the variables <code>diff-indicator-removed-face</code> and <code>diff-indicator-added-face</code> to be faces whose colors/properties you like.  There are also <code>changed</code> varieties of the face and variable.</p>
+
+<p>Other packages for enhancing <code>diff-mode</code> can be found <a href=""http://www.emacswiki.org/emacs/DiffEnhancements"" rel=""nofollow noreferrer"">here</a>.</p>
+",https://i.sstatic.net/riaje.gif,1,Average Popular,Old
+809706,"I'm trying to create a sitemap in an ASP.NET MVC project.
+This code in my Node controller...
+Function Sitemap() As ContentResult
+    Dim db As New EfrDotOrgEntities
+    Dim Nodes = db.Node.ToList
+    Dim RequestUrl As Uri = Url.RequestContext.HttpContext.Request.Url
+    Dim AbsoluteRoot As String = String.Format(""{0}://{1}"", RequestUrl.Scheme, RequestUrl.Authority)
+
+    Dim map As XDocument = <?xml version=""1.0"" encoding=""UTF-8""?>
+                           <urlset xmlns=""http://www.sitemaps.org/schemas/sitemap/0.9"">
+                           </urlset>
+    For Each n As Node In Nodes
+        map.Add(<url>
+                    <loc><%= AbsoluteRoot + Url.RouteUrl(""IdOnly"", New With {.id = n.Id}) %></loc>
+                </url>)
+    Next
+    Return Content(map.ToString, ""text/xml"", Encoding.UTF8)
+End Function
+
+(here's an image because Stack Overflow doesn't color VB code well)
+
+...produces this error:
+
+This operation would create an
+  incorrectly structured document.
+
+It wouldn't know where to add that content.
+How do I tell it to insert that bit of XML into the <urlset>?
+",How do I insert a bit of XML into an XDocument using Visual Basic?,"['asp.net-mvc', 'xml', 'vb.net', 'sitemap']",5/1/2009 0:22,2285,809760,2,"<p>You need to add it to the top level element in the document (the root):</p>
+
+<pre><code>map.Root.Add(...)
+</code></pre>
+",https://i.sstatic.net/yQ3Oy.gif,1,Average Popular,Old
+921106,"I'd like to create the context extension methods described in Cesar de la Torre's blog post.
+But I'm not sure how to declare the class that holds my extension methods.
+Griff Townsend wrote:
+
+If I include a reference to this class
+  (or have the class in my namespace),
+  any ObjectContext references will be
+  able to execute these extensions:
+
+If you look at the tool tip in the
+  photo above, you should be able to see
+  that I can now cleanly access any
+  function that I add to the EntitySet
+  that I create.
+
+How do I declare the class that holds my extension methods?
+",How to create ADO.NET Entity Framework ObjectContext extensions,"['c#', 'entity-framework']",5/28/2009 14:22,2068,921303,1,"<p>You just have to declare a static class :</p>
+
+<pre><code>public static class MyExtensions
+{
+    // extension methods go here
+}
+</code></pre>
+",https://4.bp.blogspot.com/_wtz1ml2FXzY/SLtQloSs0KI/AAAAAAAAABI/X5RSyF3awxQ/s400/ExtensionScreen.png,1,Average Popular,Old
+774464,"I can't seem to make this undefined reference go away.
+
+I have this code under the private section of Scene.h:
+static Scene * scene_;
+
+There is a #include ""Scene.h"" at the very first part of the header of Scene.cpp
+This is the only error I'm receiving at the moment, any ideas?
+I'll supply any other info you want.
+","Undefined reference? Is there something I'm not seeing? (c++, singleton class)","['c++', 'reference', 'singleton', 'undefined']",4/21/2009 20:32,1851,774484,2,"<p>When you declare a static member you must also define it in one compilation unit (and only one):</p>
+
+<pre><code>// a.h
+class A
+{
+   static int x;
+};
+
+// a.cpp
+int A::x = 0;
+</code></pre>
+
+<p>The declaration of the variable in the class will not reserve memory, just tell the compiler (from other compilation units) that there will be a variable accessible by that name defined somewhere.</p>
+",https://i.sstatic.net/I0HXh.png,2,Average Popular,Old
+2945508,"The IHideObjectMembers trick (a.k.a IFluentInterface) can be used e.g. in fluent interface implementations to hide System.Object members from IntelliSense. (If you don't know this trick, you can read up on it via the above link; I'm just repeating the interface's usual declaration here:)
+using System;
+using System.ComponentModel;
+
+[EditorBrowsable(EditorBrowsableState.Never)]
+public interface IHideObjectMembers
+{
+    [EditorBrowsable(EditorBrowsableState.Never)] bool Equals(object obj);
+    [EditorBrowsable(EditorBrowsableState.Never)] int GetHashCode();
+    [EditorBrowsable(EditorBrowsableState.Never)] Type GetType();
+    [EditorBrowsable(EditorBrowsableState.Never)] string ToString();
+}
+
+I'm now supposed to be able to hide System.Object members on another type as follows:
+public class SomeClass : IHideObjectMembers { ... }
+
+or:
+public interface ISomeInterface : IHideObjectMembers { ... }
+
+I tried this in both VS 2008 Express and VS 2008 Standard. However, no members are hidden from IntelliSense at all. I have used the EditorBrowsableAttribute in different projects and it always worked well; however, it doesn't work in this particular scenario.
+
+If things had worked as expected, I would only have seen the SomeMethodTwo method.
+Am I missing something?
+
+P.S.: You can infer my example code from the declarations and the screenshot. I have a class SomeClass with a single dummy method called SomeMethodTwo. Very simple. I have not re-implemented the four System.Object methods in this class, as this should not be necessary.
+",VS IntelliSense - IFluentInterface / IHideObjectMembers trick does not work. Why?,"['visual-studio-2008', 'filter', 'intellisense', 'class-members']",5/31/2010 19:10,1837,9331338,3,"<p>The trick works if you don't use</p>
+
+<pre><code>var x = new SomeClass();
+</code></pre>
+
+<p>but explicitely use the interface that inherits from <code>IHideObjectMembers</code></p>
+
+<pre><code>ISomeInterface x = new SomeClass();
+</code></pre>
+
+<p><code>var</code> takes the Type of the concrete class. Thus IntelliSense will look for <code>object.ToString()</code> and not <code>IHideObjectMembers.ToString()</code>. The former is not decorated with the <code>EditorBrowsableAttribute</code> while the later is.</p>
+
+<p>Daniel Cazzulino explicitely refers to <strong>interfaces</strong> in his post</p>
+
+<blockquote>
+  <p>we’ve done this with all the interfaces in our fluent API </p>
+</blockquote>
+",https://i.sstatic.net/rr4na.png,2,Average Popular,Old
+2687385,"the VMware is able to ping the gmail server.
+sample code
+
+            MailMessage mail = new MailMessage();
+            SmtpClient SmtpServer = new SmtpClient(""smtp.gmail.com"");
+            mail.From = new MailAddress(""fromxyz@gmail.com"");
+            mail.To.Add(""to"");
+            mail.Subject = ""subjct"";
+            mail.Body = ""email body!!"";
+
+            System.Net.Mail.Attachment attachment;
+            attachment = new System.Net.Mail.Attachment(""filename.extension"");
+            mail.Attachments.Add(attachment);
+
+            SmtpServer.Port = 587;
+            SmtpServer.Credentials = new System.Net.NetworkCredential(""email id"", ""password"");
+            SmtpServer.EnableSsl = true;
+
+            SmtpServer.Send(mail);
+
+
+I have got it has something to do with ports being open on vmware some networking issue, but i just can't put a finger on it. Please let know what it is that i am doing wrong.
+Thnx - Egon
+
+update : image: 
+
+
+update 2 : 
+here are the exception details :
+System.Net.Mail.SmtpException was unhandled
+  Message=""Failure sending mail.""
+  Source=""System""
+  StackTrace:
+       at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at Search_Main.Rating_Result.sendIt() in C:\Users\cloud\Desktop\demo\demo\Search_Main0\Search_Main\Search_Main\Rating_Result.xaml.cs:line 98
+   at Search_Main.Rating_Result.ShareTOAll(Object sender, RoutedEventArgs e) in C:\Users\cloud\Desktop\demo\demo\Search_Main0\Search_Main\Search_Main\Rating_Result.xaml.cs:line 143
+   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)
+   at System.Windows.Controls.Primitives.ButtonBase.OnClick()
+   at System.Windows.Controls.Button.OnClick()
+   at System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(MouseButtonEventArgs e)
+   at System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)
+   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)
+   at System.Windows.UIElement.CrackMouseButtonEventAndReRaiseEvent(DependencyObject sender, MouseButtonEventArgs e)
+   at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)
+   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   at System.Windows.Input.InputManager.ProcessStagingArea()
+   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)
+   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)
+   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Boolean isSingleParameter)
+   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)
+   at System.Windows.Threading.Dispatcher.WrappedInvoke(Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)
+   at System.Windows.Threading.Dispatcher.InvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Boolean isSingleParameter)
+   at System.Windows.Threading.Dispatcher.Invoke(DispatcherPriority priority, Delegate method, Object arg)
+   at MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   at MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   at System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   at System.Windows.Threading.Dispatcher.PushFrame(DispatcherFrame frame)
+   at System.Windows.Threading.Dispatcher.Run()
+   at System.Windows.Application.RunDispatcher(Object ignore)
+   at System.Windows.Application.RunInternal(Window window)
+   at System.Windows.Application.Run(Window window)
+   at System.Windows.Application.Run()
+   at Search_Main.App.Main() in C:\Users\cloud\Desktop\demo\demo\Search_Main0\Search_Main\Search_Main\obj\Debug\App.g.cs:line 0
+   at System.AppDomain._nExecuteAssembly(Assembly assembly, String[] args)
+   at System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)
+   at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+
+**InnerException: System.Net.WebException
+       Message=""Unable to connect to the remote server""
+   Source=""System""**
+   StackTrace:
+        at System.Net.ServicePoint.GetConnection(PooledStream PooledStream, Object owner, Boolean async, IPAddress& address, Socket& abortSocket, Socket& abortSocket6, Int32 timeout)
+        at System.Net.PooledStream.Activate(Object owningObject, Boolean async, Int32 timeout, GeneralAsyncDelegate asyncCallback)
+        at System.Net.PooledStream.Activate(Object owningObject, GeneralAsyncDelegate asyncCallback)
+        at System.Net.ConnectionPool.GetConnection(Object owningObject, GeneralAsyncDelegate asyncCallback, Int32 creationTimeout)
+        at System.Net.Mail.SmtpConnection.GetConnection(String host, Int32 port)
+        at System.Net.Mail.SmtpTransport.GetConnection(String host, Int32 port)
+        at System.Net.Mail.SmtpClient.GetConnection()
+        at System.Net.Mail.SmtpClient.Send(MailMessage message)
+
+
+   **InnerException: System.Net.Sockets.SocketException
+        Message=""No connection could be made because the target machine actively refused it 74.125.95.109:587""
+        Source=""System""**
+        ErrorCode=10061
+        NativeErrorCode=10061
+        StackTrace:
+             at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+             at System.Net.Sockets.Socket.InternalConnect(EndPoint remoteEP)
+             at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Int32 timeout, Exception& exception)
+        InnerException: 
+
+",Unable to send smtp emails in C# with a VMware vm of win 7,"['c#', 'smtp', 'gmail', 'vmware']",4/22/2010 0:06,1806,2687501,2,"<p>If port 587 isn't working (which is the port for TLS/STARTTLS) try 465 (Port for SSL).</p>
+
+<p><a href=""http://mail.google.com/support/bin/answer.py?hl=en&amp;answer=13287"" rel=""nofollow noreferrer"">http://mail.google.com/support/bin/answer.py?hl=en&amp;answer=13287</a></p>
+",https://i.sstatic.net/alsLS.png,2,Average Popular,Old
+1125846,"in the past hour i have been trying different variants of this query but i get error at the username   , and the username is just a normal string with username that i get from xml file containing no special characters or whatsoever 
+I'm using SLQ compact 3.5 
+P.S i tried to use ? instead of @username also not working
+all feilds are ""nchar"" except ""date""
+                C = nodeItem[""user_from""].InnerText;
+                avatar = nodeItem[""user_from_avatar""].InnerText;
+                string msgText = nodeItem[""message""].InnerText;
+                DateTime dt=DateTime.Now;
+
+                string sql = ""INSERT INTO posts(user,msg,avatar,date) VALUES(@username,@messige,@userpic,@thedate)"";
+                using (SqlCeCommand cmd = new SqlCeCommand(sql, connection))
+                {
+                    cmd.Parameters.Add(""@username"",C);
+                    cmd.Parameters.Add(""@messige"", msgText.ToString());
+                    cmd.Parameters.Add(""@userpic"", avatar.ToString());
+                    cmd.Parameters.Add(""@thedate"", dt);
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    adapter.Update(data);
+                    connection.Close();
+                }
+
+The error msg :  
+(source: clip2net.com)
+Thanks , 
+Nikola 
+",Whats wrong with this SQLCe Query?,"['ado.net', 'sql-server-ce']",7/14/2009 14:37,1632,1125900,2,"<p>Try surrounding 'user' with square brackets, '[user]'  (and possibly date).</p>
+",https://i.sstatic.net/aAR8c.png,2,Average Popular,Old
+1303754,"I was writing some code today and something was not working as I expected.
+Why does the following code execute even though the condition should have evaluated to false?
+alt text http://img215.imageshack.us/img215/3011/agfewrf.gif
+I have tried putting braces around the two conditions, and switching their position, but the EndedUsingApplication even still executes.
+EDIT:
+It has nothing to do with the || or && operators. Look at this...
+
+
+Nobody can learn from my mistake unless I post the culprit code, so here it is.
+  public static bool operator ==(ActiveApplication a, ActiveApplication b)
+     {
+     if ((object)a == null || (object)b == null)
+        return false;
+     return a.process_name == b.process_name && a.window_title == b.window_title;
+     }
+
+  public static bool operator !=(ActiveApplication a, ActiveApplication b)
+     {
+     return a == b ? false : true;
+     }
+
+And here is the working code ...
+  public static bool operator ==(ActiveApplication a, ActiveApplication b)
+     {
+     // Casting to object class prevents this comparison operator being executed
+     // again and causing an infinite loop (which I think .NET detects and stops
+     // but it would still be a huge hole in the logic.
+     if ((object)a == null && (object)b == null)
+        return true;
+     if ((object)a == null ^ (object)b == null)
+        return false;
+     return a.process_name == b.process_name && a.window_title == b.window_title;
+     }
+
+  public static bool operator !=(ActiveApplication a, ActiveApplication b)
+     {
+     return a == b ? false : true;
+     }
+
+The problem appeared to be when the != operator received two null values.
+",Overriding C# Conditional statements problem,['c#'],8/20/2009 3:13,1588,1303790,5,"<p>Have you overloaded <code>!=</code>?</p>
+
+<p></p>
+",https://i.sstatic.net/XpBOB.gif,2,Average Popular,Old
+230226,"I'm struggling with Visual Studio 2008. I've used some form of ""Zen"" colors for more than I can remember. In VS2008 I keep getting one color that I cannot read and I have been unable to identify it; the purpose of the question is to avoid trial an error (the VS color interface is really ugly with no ""real time"" apply button).
+If you look at the following picture, I'm debugging and the function on top has called the function below. The problem is that the calling line in upper function turns white (background) and is hard to read. 
+The question is: Does anybody know what exact setting will allow me to change that?
+Thanks in advance. 
+
+",Colors in Visual Studio 2008,"['visual-studio-2008', 'colors']",10/23/2008 15:38,1539,230254,2,"<p>This describes the meaning of all those color options.</p>
+
+<p>I think the one you are looking for is ""Call Return""</p>
+
+<p><a href=""http://msdn.microsoft.com/en-us/library/kw7t0545.aspx"" rel=""nofollow noreferrer"">http://msdn.microsoft.com/en-us/library/kw7t0545.aspx</a></p>
+",https://i.sstatic.net/mb5Bi.jpg,0,Average Popular,Old
+2813427,"I have just installed suds and given a try for it in Aptana Studio. While, it seems not to resolve from suds.client import Client by underscoring it in red, the following code still works. So, I have decided to install Eclipse-Plugin for Pydev by running the same code. This time Eclipse Plugin can resolve Client as expectedly. 
+Why can't Aptana Studio resolve this class, unlike Eclipse Plugin? Is this kind of a bug, or have I screwed something while installing suds package? 
+
+
+",Aptana Studio can't resolve the import but works,"['aptana', 'pydev', 'suds']",5/11/2010 18:34,1517,2814506,1,"<p>I have removed and Auto Configured python interpreter from Window->Preferences->PyDev and it works now.</p>
+
+<p>I was to delete such a simple question, but leave it here for the similar situation for others.</p>
+",https://i.sstatic.net/D4643.png,2,Average Popular,Old
+2679395,"I'm having an argument with the CodeContracts static analysis tool.
+My code:
+
+
+(ASCII version)
+The tool tells me that instance.bar may be a null reference. I believe the opposite.
+Who is right? How can I prove it wrong?
+",CodeContracts: Possibly calling a method on a null reference,"['c#', 'visual-studio-2010', 'code-contracts']",4/20/2010 23:27,1505,2777405,5,"<p><strong>Update</strong>: It seems the problem is that <a href=""http://social.msdn.microsoft.com/Forums/en-US/codecontracts/thread/cb5128a4-4389-4383-b8b5-8a82615f26fc"" rel=""nofollow noreferrer"">invariants are not supported for static fields</a>.</p>
+
+<p><strong>2nd Update:</strong> The method outlined below is <a href=""http://social.msdn.microsoft.com/Forums/en-US/codecontracts/thread/cea2ddb6-cb1d-408e-bd92-6574ce4a1d5d"" rel=""nofollow noreferrer"">currently the recommended solution</a>.</p>
+
+<p>A possible workaround is to create a property for <code>instance</code> that <code>Ensure</code>s the invariants that you want to hold. (Of course, you need to <code>Assume</code> them for the <code>Ensure</code> to be proven.) Once you have done this, you can just use the property and all the invariants should be proven correctly.</p>
+
+<p>Here's your example using this method:</p>
+
+<pre><code>class Foo
+{
+    private static readonly Foo instance = new Foo();
+    private readonly string bar;
+
+    public static Foo Instance
+    // workaround for not being able to put invariants on static fields
+    {
+        get
+        {
+            Contract.Ensures(Contract.Result&lt;Foo&gt;() != null);
+            Contract.Ensures(Contract.Result&lt;Foo&gt;().bar != null);
+
+            Contract.Assume(instance.bar != null);
+            return instance;
+        }
+    }
+
+    public Foo()
+    {
+        Contract.Ensures(bar != null);
+        bar = ""Hello world!"";
+    }
+
+    public static int BarLength()
+    {
+        Contract.Assert(Instance != null);
+        Contract.Assert(Instance.bar != null);
+        // both of these are proven ok
+
+        return Instance.bar.Length;
+    }
+}
+</code></pre>
+",https://i.sstatic.net/OwTF6.png,2,Average Popular,Old
+1066665,"My Code:
+foreach (PicasaEntry entryAlbuns in feedAlbuns.Entries)
+{                
+   AlbumAccessor ac = new AlbumAccessor(entryAlbuns);
+   PhotoQuery photos = new PhotoQuery(PicasaQuery.CreatePicasaUri(""admin@localhost"", ac.AlbumTitle));
+   PicasaFeed feedPhotos = service.Query(photos);
+}
+
+When debugger step in line PicasaFeed feedPhotos = service.Query(photos); get an error
+
+The remote server returned an error:
+(404) Not Found.
+
+Check parameters accepted:
+
+PS: Because of security reasons I replaced my email account to admin@localhost.
+","Picasa API returns ""The remote server returned an error: (404) Not Found.""","['c#', 'gdata-api', 'picasa']",6/30/2009 23:48,1493,1348944,2,"<p>I had the same problem. </p>
+
+<p>For Google API 1.2.2.0
+Use the AlbumAccessor.Name instead of AlbumAccessor.AlbumTitle.
+Google should make this more obvious in the documentation.</p>
+
+<p>For Google APL 1.4.0.2 
+Use the AlbumAccessor.Id instead of AlbumAccessor.AlbumTitle.
+Google should make this more obvious in the documentation.</p>
+
+<p>Sample Code:</p>
+
+<pre><code>AlbumAccessor ac = new AlbumAccessor(AlbumEntry);
+PhotoQuery query = new PhotoQuery();
+query.Uri = new Uri(PicasaQuery.CreatePicasaUri(_login,AlbumAccessor.Id));                                
+
+photoFeed = picasaService.Query(query);
+</code></pre>
+",https://i.sstatic.net/uN4CN.jpg,2,Average Popular,Old
+2551960,"I am getting the following failure message when i build on the below two lines
+http://www.freeimagehosting.net/][img]http://www.freeimagehosting.net/uploads/eb92ef98ac.jpg
+
+Exceptions = message.Substring(trav + 1, expdiff - 1);
+                    ExceptionList.Add(Exceptions);
+",Cannot implicitly convert string to text box,"['c#', 'asp.net', 'visual-studio-2008']",3/31/2010 10:08,1474,2551980,3,"<pre><code>Exceptions.Text = message.Substring(trav + 1, expdiff - 1);
+ExceptionList.Add(Exceptions.Text);
+</code></pre>
+",https://i.sstatic.net/9jKWe.jpg,2,Average Popular,Old
+1555433,"I'm working with a complicated xml schema, for which I have created a class structure using xsd.exe (with some effort).  I can now reliably deserialize the xml into the generated class structure.  For example, consider the following xml from the web service:
+<ODM FileType=""Snapshot"" CreationDateTime=""2009-10-09T19:58:46.5967434Z"" ODMVersion=""1.3.0"" SourceSystem=""XXX"" SourceSystemVersion=""999"">
+  <Study OID=""2"">
+    <GlobalVariables>
+      <StudyName>Test1</StudyName>
+      <StudyDescription/>
+      <ProtocolName>Test0001</ProtocolName>
+    </GlobalVariables>
+    <MetaDataVersion OID=""1"" Name=""Base Version"" Description=""""/>
+    <MetaDataVersion OID=""2"" Name=""Test0001"" Description=""""/>
+    <MetaDataVersion OID=""3"" Name=""Test0002"" Description=""""/>
+  </Study>
+</ODM>
+
+I can deserialize the xml as follows:
+public ODMcomplexTypeDefinitionStudy GetStudy(string studyId)
+{
+  ODMcomplexTypeDefinitionStudy study = null;
+  ODM odm = Deserialize<ODM>(Service.GetStudy(studyId));
+  if (odm.Study.Length > 0)
+    study = odm.Study[0];
+  return study;
+}
+
+Service.GetStudy() returns an HTTPResponse stream from the web service.  And Deserialize() is a helper method that deserializes the stream into the object type T.  
+My question is this: is it more efficient to let the deserialization process create the entire class structure and deserialize the xml, or is it more efficient to grab only the xml of interest and deserialize that xml.  For example, I could replace the above code with:
+public ODMcomplexTypeDefinitionStudy GetStudy(string studyId)
+{
+  ODMcomplexTypeDefinitionStudy study = null;
+  using (XmlReader reader = XmlReader.Create(Service.GetStudy(studyId)))
+  {
+    XDocument xdoc = XDocument.Load(reader);
+    XNamespace odmns = xdoc.Root.Name.Namespace;
+    XElement elStudy = xdoc.Root.Element(odmns + ""Study"");
+    study = Deserialize<ODMcomplexTypeDefinitionStudy>(elStudy.ToString());
+  }
+return study;
+}
+
+I suspect that the first approach is preferred -- there is a lot of dom manipulation going on in the second example, and the deserialization process must have optimizations; however, what happens when the xml grows dramatically?  Let's say the source returns 1 MB of xml and I'm really only interested in a very small component of that xml.  Should I let the deserialzation process fill up the containing ODM class with all it's arrays and properties of child nodes?  Or just go get the child node as in the second example!!??
+Not sure this helps, but here's a summary image of the dilemma:
+
+",Efficiency of deserialization vs. XmlReader,"['serialization', 'xmlreader']",10/12/2009 16:05,1351,1555486,2,"<p>Brett,</p>
+
+<p>Later versions of .net will build custom serializer assemblies. Click on project properties -> build and look for ""Generate serialization assemblies"" and change to On. The XML deserializer will use these assemblies which are customized to the classes in your project. They are much faster and less resource intensive since reflection is not involved.</p>
+
+<p>I would go this route so that if you class changes you will not have to worry about serialization issues. Performance should not be an issue.</p>
+",https://farm3.static.flickr.com/2631/4004603153_25989c820f_o.png,0,Average Popular,Old
+1405486,"I am seeing something odd with storing doubles in a dictionary, and am confused as to why.
+Here's the code:
+            Dictionary<string, double> a = new Dictionary<string, double>();
+            a.Add(""a"", 1e-3);
+
+            if (1.0 < a[""a""] * 1e3)
+                Console.WriteLine(""Wrong"");
+
+            if (1.0 < 1e-3 * 1e3)
+                Console.WriteLine(""Wrong"");
+
+The second if statement works as expected; 1.0 is not less than 1.0.  Now, the first if statement evaluates as true.  The very odd thing is that when I hover over the if, the intellisense tells me false, yet the code happily moves to the Console.WriteLine.
+This is for C# 3.5 in Visual Studio 2008.
+Is this a floating point accuracy problem?  Then why does the second if statement work?  I feel I am missing something very fundamental here.
+Any insight is appreciated.
+Edit2 (Re-purposing question a little bit):
+I can accept the math precision problem, but my question now is: why does the hover over evaluate properly?  This is also true of the immediate window.  I paste the code from the first if statement into the immediate window and it evaluates false.
+Update
+First of all, thanks very much for all the great answers.
+I am also having problems recreating this in another project on the same machine.  Looking at the project settings, I see no differences.  Looking at the IL between the projects, I see no differences.  Looking at the disassembly, I see no apparent differences (besides memory addresses).  Yet when I debug the original project, I see:
+
+
+The immediate window tells me the if is false, yet the code falls into the conditional.
+At any rate, the best answer, I think, is to prepare for floating point arithmetic in these situations.  The reason I couldn't let this go has more to do with the debugger's calculations differing from the runtime.  So thanks very much to Brian Gideon and stephentyrone for some very insightful comments.
+",How does a C# evaluate floating point in hover over and immediate window versus compiled?,"['c#', 'math', 'floating-point']",9/10/2009 14:04,1300,1405507,4,"<p>It is floating precision problem.</p>
+
+<p>Second statement works because the compiler counts the expression 1e-3 * 1e3 before emitting the .exe. </p>
+
+<p>Look it up in ILDasm/Reflector, it will emit something like </p>
+
+<pre><code> if (1.0 &lt; 1.0)
+                Console.WriteLine(""Wrong"");
+</code></pre>
+",https://i.sstatic.net/xm4wA.png,0,Average Popular,Old
+958932,"I am using Microsoft Text-to-Text Speech feature in my project. But I have a question about that, actually not directly about that. So :
+Normally programmers when creating Interface, they put I as a prefix of the interface name like IReadable,IEnumerator etc. But I've come across something that actually shocked me.
+in Microsoft Text Speech DLL there is something like this : SpVoice which is interface (they didn't put I as prefix for some reason and I don't know why ?) and SpVoiceClass. So then what's the problem you may ask, Here : 
+SpVoice speak= new SpVoice(); //I created an object from SpVoice Interface
+speak.Speak(""Hello StackOverFlow""); //and it speaks and say exactly what I write.
+
+and
+SpVoiceClass speak =  new SpVoiceClass();
+speak.Speak(""Hello Kowanichi""); //and it does the same thing.
+
+The thing I don't get is how ? How does the first one work although it says it is an interface with tons of unimplemented methods etc.
+Please some one explain me HOW ?
+I am really confused now and maybe Microsoft developers didn't put I prefix for that reason, it can be instantiated. 
+Thanks in advance. 
+Hope I describe my problem clearly.
+Here is the image that I want you to see :
+
+(source: pixelshack.us) 
+",It looks like I'm instantiating this SpeechAPI interface. How is that possible?,"['class', 'interface', 'instance']",6/6/2009 3:40,1224,958952,3,"<p><strong>EDIT</strong>: Ah, I see.  Look at the definition of SpVoice:</p>
+
+<pre><code>[CoClass(typeof(SpVoiceClass))]
+public interface SpVoice : ISpeechVoice, _ISpeechVoiceEvents_Event
+{}
+</code></pre>
+
+<p>Then look up the CoClass attribute:</p>
+
+<blockquote>
+  <p>A coclass supplies concrete
+  implementation(s) of one or more
+  interfaces. In COM, such concrete
+  implementations can be written in any
+  programming language that supports COM
+  component development, e.g. Delphi,
+  C++, Visual Basic, etc.</p>
+</blockquote>
+
+<p>I'm not familiar with this, so don't take this as gospel, but it appears that, through compiler magic triggered by the <code>CoClass</code> attribute, you're instantiating an instance of <code>SpVoiceClass</code> when it looks like you're instantiating an interface.</p>
+",https://i.sstatic.net/rOsxz.png,1,Average Popular,Old
+1117069,"I'm used to VSSConneXion, and love the feature 'Review Changes' where I can go through every changed file and comment the change while looking at it:
+
+Now I'm trying to get used to SubVersion and Tortoise. Is there a similar feature available? I can get a list of changed file, and I can diff each file for changes, but I can't find a way to comment on the changes while looking at the diffs. 
+",Subversion: Review changes,"['svn', 'tortoisesvn']",7/12/2009 22:11,1223,1135913,2,"<p>I typically simply use the TortoiseSVN commit dialog for this. </p>
+
+<ul>
+<li>svn commit => dialog shows up with list of changes</li>
+<li>one by one, I can review the changes, and write my commit message in the dialog</li>
+<li>the best part of it is that TortoiseSVN remembers commit messages. Even if I click cancel, I can continue with the same message previously created.</li>
+</ul>
+
+<p>Very simple, no extra tools needed.</p>
+",https://www.epocalipse.com/images/v_review_changes.png,1,Average Popular,Old
+1578227,"When i want to use delegate class to make call while windows form working, i always have to use InvokeRequired. It is ok. But who changed the InvokeReuqired property while it is working.
+Please check this image:
+
+",When does the vaIue of the InvokeRequired property change?,"['c#', 'multithreading', 'delegates', 'invokerequired']",10/16/2009 13:59,1179,1578241,3,"<p>You're calling <code>Delegate.BeginInvoke</code> in <code>button1_Click</code>, which means <code>SayListeyeEkle</code> will be called in a thread-pool thread - which means it's entirely correct for <code>InvokeRequired</code> to be true. It <em>wouldn't</em> be true if you called <code>ListeyeEkle</code> directly from <code>button1_Click</code>, in the UI thread.</p>
+",https://content.screencast.com/users/uzay95/folders/Jing/media/813e6d67-2b86-4a15-841d-526d9bcb389e/2009-10-16_1652.png,0,Average Popular,Old
+1189896,"I have a textbox which i applied on it jq wysiwyg:
+public static void PopulateWysiwyg(this SafeTextBox tb)
+{
+    string script =
+@""
+jQuery(document).ready(function()
+{
+    jQuery('#safe_text_box').wysiwyg();
+});
+"";
+
+    ScriptManager.RegisterStartupScript(
+        tb,
+        tb.GetType(), 
+        tb.ClientID + ""_wysiwyg"", 
+        script.Replace(""safe_text_box"", tb.ClientID), true
+    );
+}
+
+When I click a postback button on the form, the wysiwyg js throws an exception:
+
+Any help?
+","jquery wysiwyg throws ""Object doesn't support this property or method"" on postback","['javascript', 'jquery', 'exception', 'wysiwyg']",7/27/2009 18:44,1170,1189956,2,"<p>Do you see the bit of code that is commented out in the wysiwyg plugin.  Re-enable that bit of code and take out the return statement above it.  That code implements the browser-aware bit that will make the code work in IE.</p>
+",https://farm4.static.flickr.com/3558/3762255039_d462d7665e_o.jpg,2,Average Popular,Old
+2789800,"I can't, for the life of me, figure out how to change grey highlight color in the screenshot below to something that will make the text a little more legible. Does anyone know what the ""Display Item"" name is that I need to change?
+To get to the ""theme editor"" select Tools => Options => Environment => Fonts and Colors. I can't find what to edit.
+I've also looked through Tools => Options => Text Editor => HTML => Formatting to no avail.
+
+In case you are wondering the theme is a slightly modified Coding Instinct Theme
+",Visual Studio HTML Cursor-within-HTML-Element Syntax-highlighting color,"['visual-studio', 'visual-studio-2010', 'syntax-highlighting']",5/7/2010 15:41,1065,2792466,2,"<p>Try ""Brace Matching (Rectangle)"" (the background color).</p>
+",https://i.sstatic.net/sns9A.png,2,Average Popular,Old
+2799609,"I wrote like this. After submit click loop is not excuting. But I saw value are there, But array lenght is showing '0'. (Please see picture). Why it is not going into loop?  and $('#myVisibleRows').val(idsString); becoming 'empty'.
+$(document).ready(function() {
+
+        $('tr[@class^=RegText]').hide().children('td');
+
+        var list_Visible_Ids = [];
+        var idsString, idsArray;
+        alert($('#myVisibleRows').val());
+        idsString = $('#myVisibleRows').val();
+        idsArray = idsString.split(',');
+        $.each(idsArray, function() {
+            if (this != """") {
+                $('#' + this).siblings(('.RegText').toggle(true));
+                window['list_Visible_Ids'][this] = 1;
+            }
+        });
+        $('tr.subCategory1')
+        .css(""cursor"", ""pointer"")
+        .attr(""title"", ""Click to expand/collapse"")
+        .click(function() {
+            //this = $(this);
+            $(this).siblings('.RegText').toggle();
+
+            list_Visible_Ids[$(this).attr('id')] = $(this).css('display') != 'none' ? 1 : null;
+            alert(list_Visible_Ids[$(this).attr('id')])
+        });
+        $('#form1').submit(function() {
+
+            idsString = '';
+            $.each(list_Visible_Ids, function(key, val) {
+                alert(val);
+                if (val) {
+
+                    idsString += (idsString != '' ? ',' : '') + key;
+                }
+            });
+            $('#myVisibleRows').val(idsString);                
+            form.submit();
+        });
+    });
+
+
+",Array length is zero in jQuery,"['asp.net', 'jquery', 'vb.net', 'arrays']",5/9/2010 23:42,1038,2799886,2,"<p>finally it works me like this.</p>
+
+<pre><code> for (var index in list_Visible_Ids) {
+                idsString += (idsString != '' ? ',' : '') + index;
+            }
+</code></pre>
+",https://i700.photobucket.com/albums/ww5/vsrikanth/jquery.jpg,2,Average Popular,Old
+733828,"i have a GridView with LinqDataSource.
+im using the following technique to populate a field (Supplier in this case) with dropdownlist, containing values from a different LinqDataSource:
+
+(source: scottgu.com) 
+however, lets say my Supplier field is allowed to be null. any ideas how to allow entering null value, alongside with the other SupplierDataSource options?
+",how to combine dropdownlists and null fields in gridview?,"['asp.net', 'linq-to-sql', 'gridview']",4/9/2009 11:38,894,734335,1,"<p>Please try this:</p>
+
+<pre><code>    &lt;asp:DropDownList ID=""DropDownList1""
+      DataSourceID=""SupplierDataSource""
+      DataValueField=""SupplierID""
+      DataTextField=""CompanyName""
+      SelectedValue='&lt;%#Bind(""SupplierID"")%&gt;'
+      runat=""server""
+      AppendDataBoundItems=""true""&gt;
+        &lt;asp:ListItem Value="""" Text=""None"" /&gt;
+    &lt;/asp:DropDownList&gt;
+</code></pre>
+
+<p>This should add an empty list item to your dropdown. I believe your datasource will interpret this as a null value, but I have not tested the code yet.</p>
+
+<p>Hope this helps!</p>
+",https://i.sstatic.net/Qto5u.jpg,1,Average Popular,Old
+2262429,"I have this code:
+public void setPanelHalfHorizontalScreen(Panel p)
+        {
+            if (p != null)
+            {
+                p.Width = Screen.PrimaryScreen.Bounds.Width / 2 - 2;
+                this.panelsForHalfScreen.Add(p.Name, p);
+
+                // http://stackoverflow.com/questions/2261828/does-an-event-gets-executed-twice-if-callback-was-assigned-twice-to-the-object
+                this.form.Resize -= new EventHandler(form_Resize); // error raised on this line: ArgumentException was unhandled
+                this.form.Resize += new EventHandler(form_Resize);
+            }
+        }
+
+        void form_Resize(object sender, EventArgs e)
+        {
+
+            foreach (DictionaryEntry p in panelsForHalfScreen)
+            {
+                this.setPanelHalfHorizontalScreen((Panel)p.Value);
+            }
+        }
+
+How can I fix it?
+EDIT
+
+
+",System.ArgumentException was unhandled when using -= on a event delegate?,"['c#', 'exception', 'delegates']",2/14/2010 19:29,839,2262501,1,"<p>are you sure that this line does not throw ArgumentException?</p>
+
+<p>this.panelsForHalfScreen.Add(p.Name, p);</p>
+
+<p>cause Add method throws ArgumentException if key already is in Hashtable</p>
+",https://i.sstatic.net/nJELw.jpg,2,Average Popular,Old
+1525514,"For the life of me, I don't know when and how these ""dots"" started showing up in my IDE. I'm not sure if it's Visual Studio OR Code Rush from DevExpress that is doing it. 
+
+If anyone knows how to make them go away, please help! =)
+",Where are these dots coming from? How to get rid of them?,"['visual-studio-2008', 'ide']",10/6/2009 13:15,809,1525523,1,"<p>Those dots represent space characters.  You will also see little arrows for tabs, and little hooked arrows for carriage returns.</p>
+
+<p>Press <kbd>CTRL</kbd> + <kbd>R</kbd> + <kbd>W</kbd> to toggle the dots you're seeing.</p>
+
+<p>BTW this is a standard Visual Studio feature.  It has nothing to do with CodeRush or any other plugin.</p>
+
+<p><strong>EDIT</strong> As Martin points out, you could press <kbd>CTRL</kbd> + <kbd>R</kbd>, then <kbd>CTRL</kbd> + <kbd>W</kbd>.  Personally I press CTRL then hold it down for the R &amp; W keystrokes.  It's less typing.</p>
+",https://lh4.ggpht.com/_MwlyfvVOvjY/SstCb_gB-5I/AAAAAAAAAIk/FUR_vlRe2sY/s720/Screenshot.png,1,Average Popular,Old
+1514955,"Microsoft Books Online (BOL) on Using Change Data explains a misleading error messages for cdc.fn_cdc_get_all_changes_* & cdc.fn_cdc_get_net_changes_* when an invalid, out-of-range LSN (Log Sequence Number) has been passed to them.
+
+Msg 313, Level 16, State 3, Line 1
+
+An insufficient number of arguments were supplied for the procedure or function `cdc.fn_cdc_get_all_changes_` ...
+
+Msg 313, Level 16, State 3, Line 1
+
+An insufficient number of arguments were supplied for the procedure or function `cdc.fn_cdc_get_net_changes_` ...
+
+
+Their explanation on this misleading error message is as following
+
+Note:
+  It is recognized that the
+  message for Msg 313 is misleading and
+  does not convey the actual cause of
+  the failure. This awkward usage stems
+  from the inability to raise an
+  explicit error from within a TVF.
+  Nevertheless, the value of returning a
+  recognizable, if inaccurate, error was
+  deemed preferable to simply returning
+  an empty result. An empty result set
+  would not be distinguishable from a
+  valid query returning no changes.
+
+Here is a demonstration of what the note meant RAISERROR
+
+There are times when I'd like to throw an error and you cannot use TRY..CATCH within UDF since it also has a side-effect like RAISERROR.
+  
+Now the question is, how do you get around this problem? 
+I am sure that you have faced with this restriction before. 
+What alternative would you suggest? 
+
+[UPDATE] Let's suppose that you are forced to use UDF.
+",How to get around UDF restriction on side-effecting operators?,"['sql-server', 't-sql', 'user-defined-functions']",10/3/2009 21:56,756,1514971,1,"<p>In the case of your function which returns BIT, I'll return NULL back to the calling code, and at some point after using the function check for NULL, and throw an error then.</p>
+",https://farm3.static.flickr.com/2448/3977619983_51d2625ef9_o.png,1,Average Popular,Old
+2743127,"Consider the following piece of code: 
+
+As you can see we are on line 28. Is there any way to see the return value of the function at this point, without letting the code return to the caller function? 
+Foo.Bar() is a function call which generates a unique path (for example). So it's NOT constant.
+Entering ?Foo.Bar() in the immidiate window doesn't work either, since that reevaluates the code: 
+?Foo.Bar()
+""80857466""
+?Foo.Bar()
+""2146375101""
+?Foo.Bar()
+""1106609407""
+?Foo.Bar()
+""792759112""
+
+In VB.NET it's possible by entering the function's name in the Watch, which will then threat it as a variable.
+But in C# this is not possible, any other tips?
+PS: rewriting is not an option.
+",See return value in C#,"['c#', 'function', 'return-value', 'return']",4/30/2010 8:10,738,2743170,2,"<p>Answer found here: <a href=""https://stackoverflow.com/questions/591086/vs-get-returned-value-in-c-code"">VS get returned value in C# code?</a></p>
+
+<blockquote>
+  <p>It is actually visible. Debug + Other
+  Windows + Registers. Look at the value
+  of EAX (RAX in x64). The value of
+  simple integral types are returned in
+  the EAX register. Long in EDX:EAX.
+  Floating point in STx (XMM00 in x64).</p>
+</blockquote>
+",https://i.sstatic.net/hqia9.jpg,2,Average Popular,Old
+2641425,"At the end of my registration process you get to a payment screen where you can enter a coupon code, and there is an AJAX call which fetches the coupon from the database and returns it to the page so it can be applied to your total before it is submitted to paypal. It works great in Firefox, Chrome, and Safari, but in Internet Explorer, nothing happens. The (data) being returned to the jQuery function appears to be null.
+jQuery Post
+function applyPromo() {
+var enteredCode = $(""#promoCode"").val();
+$("".promoDiscountContainer"").css(""display"", ""block"");
+$("".promoDiscount"").html(""<img src='/images/loading.gif' alt='Loading...' title='Loading...' height='18' width='18' />"");
+$.post(""/ajax/lookup-promo.php"", { promoCode : enteredCode },
+   function(data){
+        if ( data != ""error"" ) {
+            var promoType = data.getElementsByTagName('promoType').item(0).childNodes.item(0).data;
+            var promoAmount = data.getElementsByTagName('promoAmount').item(0).childNodes.item(0).data;
+            $("".promoDiscountContainer"").css(""display"", ""block"");
+            $("".totalWithPromoContainer"").css(""display"", ""block"");
+            if (promoType == ""percent"") {
+                $(""#promoDiscount"").html(""-"" + promoAmount + ""%"");
+                var newPrice = (originalPrice - (originalPrice * (promoAmount / 100)));
+                $(""#totalWithPromo"").html("" $"" + newPrice);
+                if ( promoAmount == 100 ) {
+                    skipPayment();
+                }
+            }
+            else {
+                $(""#promoDiscount"").html(""-$"" + promoAmount);
+                var newPrice = originalPrice - promoAmount;
+                $(""#totalWithPromo"").html("" $"" + newPrice);
+            }
+            $(""#paypalPrice"").val(newPrice + "".00"");
+            $(""#promoConfirm"").css(""display"", ""none"");
+            $(""#promoConfirm"").html(""Promotion Found"");
+            finalPrice = newPrice;
+        }
+        else {
+            $("".promoDiscountContainer"").css(""display"", ""none"");
+            $("".totalWithPromoContainer"").css(""display"", ""none"");
+            $(""#promoDiscount"").html("""");
+            $(""#totalWithPromo"").html("""");
+            $(""#paypalPrice"").val(originalPrice + "".00"");
+            $(""#promoConfirm"").css(""display"", ""block"");
+            $(""#promoConfirm"").html(""Promotion Not Found"");
+            finalPrice = originalPrice;
+        }
+   }, ""xml"");
+
+}
+Corresponding PHP Page
+include '../includes/dbConn.php';
+
+$enteredCode = $_POST['promoCode'];
+
+$result = mysql_query( ""SELECT * FROM promotion WHERE promo_code = '"" . $enteredCode . ""' LIMIT 1"");
+
+$currPromo = mysql_fetch_array( $result );
+
+if ( $currPromo ) {
+    if ( $currPromo['percent_off'] != """" ) {
+        header(""content-type:application/xml;charset=utf-8"");
+        echo ""<?xml version=\""1.0\"" encoding=\""UTF-8\"" standalone=\""yes\""?>"";
+        echo ""<promo>"";
+        echo ""<promoType>percent</promoType>"";
+        echo ""<promoAmount>"" . $currPromo['percent_off'] . ""</promoAmount>"";
+        echo ""</promo>"";
+    }
+    else if ( $currPromo['fixed_off'] != """") {
+        header(""content-type:application/xml;charset=utf-8"");
+        echo ""<?xml version=\""1.0\"" encoding=\""UTF-8\"" standalone=\""yes\""?>"";
+        echo ""<promo>"";
+        echo ""<promoType>fixed</promoType>"";
+        echo ""<promoAmount>"" . $currPromo['fixed_off'] . ""</promoAmount>"";
+        echo ""</promo>"";
+    }
+}
+else {
+    echo ""error"";
+}
+
+When I run the code in IE, I get a javascript error on the Javascript line that says 
+var promoType = data.getElementsByTagName('promoType').item(0).childNodes.item(0).data;
+
+Here's a screenshot of the IE debugger
+
+Update
+I set a breakpoint on the line, and it actually encounters the error on this line:
+if ( data != ""error"" ) {
+
+HOWEVER, when I allow it to run the rest of the code after the breakpoint, it WORKS. I'm thinking that maybe IE is running the callback function before the ajax request is actually finished, so the PHP hasn't returned its results yet? Is there any way I can test that? 
+",Internet Explorer ajax request not returning anything,"['php', 'jquery', 'ajax', 'internet-explorer']",4/14/2010 22:11,735,2641612,1,"<p>Problem solved.</p>
+
+<p>The issue was that the PHP was returning an XML document, and the line data != ""error"" wasn't valid for an xml document, since an object can't be equal to a string. I changed the php to return XML for all cases, and changed the jQuery to read it differently and now it works beautifully. Thanks everyone for helping me talk it out.</p>
+",https://i.sstatic.net/MPh1b.png,2,Average Popular,Old
+3107040,"The braces shown below after ...ret):String are incorrectly being highlighted as red
+I'm using the following syntax definition file for actionscript:
+
+http://www.vim.org/scripts/script.php?script_id=1061
+
+
+2 Questions:
+
+Does anyone happen to know off-hand what causes this weird matching?
+Is there anyway of identifying the current syntax matching group under the cursor?
+
+",Incorrect syntax highlighting Vim (Actionscript 3),"['actionscript-3', 'vim', 'syntax-highlighting']",6/24/2010 3:26,704,3114080,1,"<ol>
+<li><p>It's because the syntax file doesn't support anonymous functions. I guess usually (in many other languages) that's an error? Fix it by removing <code>syn match   actionScriptInParen     contained ""[{}]""</code> from actionscript.vim.</p></li>
+<li><p>I don't know.</p></li>
+</ol>
+",https://i.sstatic.net/DHdrN.png,2,Average Popular,Old
+1121338,"I installed the latest version of Wordpress and added the WP-Syntax plugin (and also the Markdown Extra plugin, but I think it's unrelated to this issue).
+It works perfectly with both themes that ship with Wordpress: looking good using WordPress Default 1.6 and looking equally good with the WordPress Classic 1.5 theme.
+However it doesn't work with the excellent LightWord theme, which I would like to use. The code box looks strange with the right border at the end of the actual code:
+
+My thoughts:
+I have tried investigating this with Firebug without any success. The CSS from the WP-Syntax plugin should be the same in all three theme cases. So the fact that it looks wierd with this theme has to do with some inherited CSS property from the LightWord theme.
+This in turn probably means that the WP-Syntax plugin should reset something more for its CSS to work correctly.
+Help!
+Advanced CSS isn't something I'm good at. But I would very much like to resolve this problem as soon as possible. I'm also curious from a technical view point what could be causing this behavior? I hope someone with good CSS skills will be able to help out!
+We (you if you want to, me if you don't feel like it) could then file a bug report in the appropriate place, to get these components working together.
+To resolve this I understand you need more than screenshots. I have a link with the problem theme, which could be used to investigate further.
+Web site where the problem may be experienced (Taken down as the problem is solved)
+Edit: In response to a comment I'm also including a link to the working web site using the classic theme and the same plugin setup: Link to a working theme with these plugins (Taken down as the problem is solved)
+Thank you for reading!
+Summary of problems I'd like to solve:
+
+What's the best way to get rid of the right and bottom inner border in the code box? I first noticed the right border, but the bottom border is also an eye sore.
+The code box right border isn't visible. It's due to .wp_syntax {width:100%;} and if I set it to 99% it's visible again. Do you consider this to be a problem with the theme or the plugin?
+Making changes in the theme (style.css) or the plugin (wp-syntax.css) would be preferred if that's possible, so one of them could be standard. But which one? And how?
+
+",Fix a CSS problem with a Wordpress theme and a syntax highlighting plugin,"['css', 'xhtml']",7/13/2009 18:46,679,1121419,1,"<p>The problems you are having are due to the stylesheets of WP-Syntax and LightWord interfering with each other. I don't really think that the problems are with the theme or the plugin, they are just down to how the two interact with each other.</p>
+
+<p>To make all of the required changes, ideally you would edit styles in both <a href=""http://kentlarsson.eu/lightword-problem/wp-syntax.css"" rel=""nofollow noreferrer"">wp-syntax.css</a> and <a href=""http://kentlarsson.eu/blog/wp-content/themes/lightword/style.css"" rel=""nofollow noreferrer"">style.css</a>. You can however cheat a little.</p>
+
+<p>In <b>style.css</b> add the following:
+<pre><code>.wp_syntax { width:auto; }</p>
+
+<p>.wp_syntax table { border:0 !important; }</p>
+
+<p>.wp_syntax table td { border:0 !important; }
+</pre></code></p>
+
+<p>These changes should solve all of the problems, with the benefit of keeping all of the changes localised to a single file (style.css of the LightWood theme). The other tables in the example should all remain unchanged as well.</p>
+",https://i.sstatic.net/Z79Ud.png,2,Average Popular,Old
+2550852,"I wanted to create one js file which includes every js files to attach them to the head tag where it is.
+But i am getting this error 
+Microsoft JScript runtime error: Object expected
+
+this is my code:
+var baseUrl = document.location.protocol + ""//"" + document.location.host + '/yabant/';
+
+// To find root path with virtual directory
+function ResolveUrl(url) {
+    if (url.indexOf(""~/"") == 0) {
+        url = baseUrl + url.substring(2);
+    }
+    return url;
+}
+
+// JS dosyalarının tek noktadan yönetilmesi
+function addJavascript(jsname, pos) {
+    var th = document.getElementsByTagName(pos)[0];
+    var s = document.createElement('script');
+    s.setAttribute('type', 'text/javascript');
+    s.setAttribute('src', jsname);
+    th.appendChild(s);
+}
+
+addJavascript(ResolveUrl('~/js/1_jquery-1.4.2.min.js'), 'head');
+$(document).ready(function() {
+    addJavascript(ResolveUrl('~/js/5_json_parse.js'), 'head');
+    addJavascript(ResolveUrl('~/js/3_jquery.colorbox-min.js'), 'head');
+    addJavascript(ResolveUrl('~/js/4_AjaxErrorHandling.js'), 'head');
+    addJavascript(ResolveUrl('~/js/6_jsSiniflar.js'), 'head');
+
+    addJavascript(ResolveUrl('~/js/yabanYeni.js'), 'head');
+    addJavascript(ResolveUrl('~/js/7_ResimBul.js'), 'head');
+    addJavascript(ResolveUrl('~/js/8_HaberEkle.js'), 'head');
+    addJavascript(ResolveUrl('~/js/9_etiketIslemleri.js'), 'head');
+    addJavascript(ResolveUrl('~/js/bugun.js'), 'head');
+    addJavascript(ResolveUrl('~/js/yaban.js'), 'head');
+    addJavascript(ResolveUrl('~/embed/bitgravity/functions.js'), 'head');
+});
+
+Paths are right. I wanted to show you folder structure and watch panel:
+
+Any help would be greatly appreciated.
+",attaching js files to one js file but with JQuery error !,"['asp.net', 'javascript', 'jquery']",3/31/2010 6:11,595,2550876,2,"<p>I think the issue is that jQuery isn't finished loaded when you use the $ global.    According to <a href=""http://www.stevesouders.com/blog/2009/04/27/loading-scripts-without-blocking"" rel=""nofollow noreferrer"">Loading Scripts Without Blocking</a>, this mechanism does not always preserve execution order in IE.</p>
+
+<p>The simple solution is to use a static script tag to load jquery.  I.E. explicitly put the HTML:</p>
+
+<pre><code>&lt;script type=""text/javascript"" ""/js/1_jquery-1.4.2.min.js"" /&gt;
+</code></pre>
+
+<p>But do you really need to wait for the ready event to load the other scripts, or do you just need jQuery loaded?</p>
+",https://content.screencast.com/users/uzay95/folders/Jing/media/4a9ce421-1d5d-4b9d-badc-23842512605b/jsProblem.png,2,Average Popular,Old
+2552687,"
+
+it returns not what i expected.
+i expected something like:
+ab
+cab
+ab
+what am i doing wrong? 
+",String splitting produces different results than expected,"['c#', 'string', 'split']",3/31/2010 12:06,592,2552704,6,"<p>don't do .ToCharArray()</p>
+
+<p>it will split \r then \n</p>
+
+<p>that why you have empty value</p>
+
+<p>something like this should work</p>
+
+<pre><code>var aa = (""a"" &amp; Environment.NewLine &amp; ""b"" &amp; Environment.NewLine &amp; ""c"").Split(New String[] {Environment.NewLine}, StringSplitOptions.RemoveEmptyEntries);
+</code></pre>
+",https://i.sstatic.net/MOgs0.png,2,Average Popular,Old
+1763168,"Everywhere there are pretty pictures of failing tests shown inline in the code editor, like in Peepcodes Objective-C for Rubyist screencast and in apples own technical documentation: 
+
+(source: apple.com) 
+When I build my test-target, all I get is a little red icon down in the right corner, stating something went wrong. When clicking on it, I get the Build Results, where I can start to hunt for test results.
+Do anyone have a clue on what´s wrong?
+",Xcode missing inline test results,"['objective-c', 'unit-testing', 'xcode', 'octest']",11/19/2009 13:07,539,1763515,3,"<p>Have a look at your Xcode preferences. Under the Building tab you want to change your settings for Message Bubbles.</p>
+
+<p>This works for Xcode 3.1 which it looks like the image you've shown. Xcode 3.2 has a different style of bubble and doesn't have this preference.</p>
+",https://i.sstatic.net/0a3dT.jpg,2,Average Popular,Old
+786885,"Platform: Visual Studio 2008 SP1 with Resharper 4.1, .NET 3.5
+I have a class with a static method, GetProperty<T> that returns a property value lazily.
+private static T GetProperty<T>(T backingField, Func<T> factory) 
+    where T : class 
+{
+    if (backingField == null)
+        backingField = factory();
+    return backingField;
+}
+
+But when I use above method to return a property, 
+I am getting two warnings that says that private backing fields are not assigned.
+But they are assigned later on only when they are needed.
+
+Is this warning ignorable? 
+-- Or -- 
+Is my appoach to loading a property flawed?
+",Is my approach to lazy loading flawed?,"['c#', 'resharper', 'lazy-loading', 'warnings']",4/24/2009 17:41,507,786894,4,"<p>Your method is flawed. To take this approach you need to make <code>backingField</code> a <code>ref</code> parameter.</p>
+
+<pre><code>private static T GetProperty&lt;T&gt;(ref T backingField, Func&lt;T&gt; factory)
+</code></pre>
+
+<p>Then on <code>GetProperty</code>, pass <code>ref _ImagXpress</code> or <code>ref _PdfXpress</code>.</p>
+
+<p>The way you're doing it now just assigns a new value to the parameter, not to the actual backing field.</p>
+",https://farm4.static.flickr.com/3616/3470693703_71b6cc553b_o.png,2,Average Popular,Old
+2517706,"I just started using Netbeans to debug PHP apps, but when I inspect any object it has the CLASSNAME printed over and over, making it very difficult to understand the contents of an object. See the image below to see what I am talking about.  Anybody know what is going on?
+
+Here are some details that might be important...
+Netbeans version 6.8
+PHP 5.2.9
+Xdebug version 2.1.0 beta.  Here is my xdebug config from php.ini:
+[xdebug]
+zend_extension_ts=""C:\wamp\bin\php\php5.2.9-2\ext\php_xdebug-2.1.0beta3-5.2-vc6.dll""
+xdebug.remote_enable=on
+xdebug.remote_host=localhost
+xdebug.remote_port=9000
+xdebug.remote_handler=dbgp
+
+
+If I can't get this resolved I will be flopping back to Eclipse (which seems to be soooooo slow!).
+",Why is Netbeans + Xdebug showing repetitive results in Variables pane?,"['php', 'debugging', 'xdebug', 'netbeans6.8']",3/25/2010 17:05,471,2518830,1,"<p>Ok, looks like this is a problem with the version of xdebug that I was using.  Xdebug 2.1.0 beta has a new pseudo-property called CLASSNAME that Netbeans doesn't quite know how to handle yet.  I was able to get around this by using xdebug 2.0.5.</p>
+
+<p>In case someone is interested:<br />
+Here is the Netbeans bug report: <a href=""http://netbeans.org/bugzilla/show_bug.cgi?id=182148"" rel=""nofollow noreferrer"">http://netbeans.org/bugzilla/show_bug.cgi?id=182148</a>.<br />
+And here is the xdebug bug report: <a href=""http://bugs.xdebug.org/view.php?id=518"" rel=""nofollow noreferrer"">http://bugs.xdebug.org/view.php?id=518</a></p>
+",https://lh3.ggpht.com/_oOcxO_0UXSM/S6uVZQNqARI/AAAAAAAAACA/KE--cf-7neY/s640/2010-03-25_1151.png,2,Average Popular,Old
+3789017,"I'm debugging a web service and only the first time I connect to it I get this exception on the DefaultWsdlHelpGenerator.aspx(?) class (take a look at the path)
+
+Now it seems to be related to compliance of the basic profile 1.1 but I have that turned off in the config file.
+
+<configuration>
+  <system.web>
+    <webServices>
+      <conformanceWarnings>
+        <remove name='BasicProfile1_1'/>
+      </conformanceWarnings>
+    </webServices>
+  </system.web>
+</configuration>
+
+If I disable exceptions and let it run it finally goes thru after blowing up 4 times in the same place. After that I can go on and debug the application just fine.
+This is annoying me, specially because I haven't had this problem before and I don't know how to get rid of it. 
+Please help.
+",Web Service Debugger Exception : Undefined complexType 'http://schemas.xmlsoap.org/soap/encoding/:Array',"['asp.net', 'web-services', 'visual-studio-2010']",9/24/2010 16:22,461,4617160,1,"<p>This problem is not happening anymore after a December update of Windows. On another online forum it seems somebody had this resolved by uninstalling and reinstalling IIS. The problem seems to be related to AppPools targeting 4.0 Framework.  </p>
+
+<p>Is not happening anymore... magic in the air :)</p>
+",https://i.sstatic.net/L0nGe.png,2,Average Popular,Old
+784920,"Accidentally I pressed some keys while writing C# code in VS2008 and space characters replaced by . and enter key replaced by some square boxes, now how do I reset the editor
+
+",How to avoid dots in VS2008,"['c#', 'visual-studio-2008']",4/24/2009 8:11,391,784930,5,"<p>You're probably viewing whitespace, duplicate topic here:</p>
+
+<p><a href=""https://stackoverflow.com/questions/784039/how-do-i-get-rid-of-the-dots"">How do I get rid of the dots!</a></p>
+",https://lh4.ggpht.com/_M5W2QFQgto4/SfFzUDSaH5I/AAAAAAAADUg/cieNm6UXXHQ/dots.jpg,1,Average Popular,Old
+2393084,"I have a function written in C# which has one parameter type as  Dictionary<string , string>. When i try to call this function in VB.Net it doesn't show the type as Dictionary<string , string> it shows as string. Below is my function
+public bool RegisterCustomerAttribute(int CustomerId
+                                          , Dictionary<string , string> dictAttribute)
+    {
+        try
+        {
+
+            List<string> keys = new List<string>(dictAttribute.Keys);
+
+            foreach (string key in keys)
+            {
+                CustomerAttribute custattr = new CustomerAttribute();
+
+                custattr.Customer.CustomerID = CustomerId;
+                custattr.Key = key;
+                custattr.Value = dictAttribute[key];
+
+                customerattrepo.AddCustomerAttribute(custattr);
+
+            }
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            string strMsg = ex.Message;
+            return false;
+        }
+    }
+
+
+
+",Problem in calling function parameter as generics dictionary from C# to vb.net,"['c#', 'generics']",3/6/2010 15:59,384,2393117,1,"<p>At first I thought there might be an overload that only takes a key and value, but you'd see an option for that at least in the intellisense.  So instead, I bet it's looking at old or out of date code &mdash; you need to reload the reference to your c# project from your VB project in visual studio.   </p>
+",https://i.sstatic.net/dK9yK.png,2,Average Popular,Old
+1317487,"Does anyone have any explanation for this? I've tried setting a width on  #menu_wrapper ul li to no avail.
+
+
+",sIFR moving a word into two lines?,"['html', 'css', 'sifr']",8/23/2009 1:17,378,1318363,3,"<p>sIFR is limited in width to the width of the element you're replacing. If this element is floated, the width is the actual width of the HTML text. If the Flash font is wider than the HTML font, this means the Flash text won't fit in the allowed width and splits into multiple lines.</p>
+
+<p>Possible solutions:</p>
+
+<ul>
+<li>Specify <code>letter-spacing</code> for the list items, such that the HTML text is as wide as the Flash text</li>
+<li>Set <code>forceSingleLine</code> parameter for <code>sIFR.replace()</code> to <code>true</code>, with as downside that the Flash movies will show horizontal resizing as they are initialized</li>
+<li>Combine the two solutions to get better initialization performance, and the security that the text will never split</li>
+</ul>
+",https://i.sstatic.net/Txtz2.png,1,Average Popular,Old
+3012160,"in this code:
+#include <QApplication>
+#include <QPushButton>
+
+int main(int argc,char *argv[])
+{
+    QApplication app(argc,argv);
+    QPushButton *button = new QPushButton(""Button Text"");
+    QObject::connect(button,SIGNAL(clicked()),&app,SLOT(quit()));
+    button->show();
+    return app.exec();
+}
+
+intellisense is appearing when the cursor is in SIGNAL parenthesis to write button event. But it doesn't appear in SLOT parenthesis to write app method ?
+is it related with & character in front of app ?
+
+",QT intellisense question,['qt4'],6/10/2010 6:34,378,3012837,1,"<p>I felt so silly.</p>
+
+<pre><code>QObject::connect(button,SIGNAL(clicked()),&amp;app,SLOT(quit()));
+</code></pre>
+
+<p>quit() or intellisense doesn't appear because any function could be written between parenthesis.</p>
+",https://content.screencast.com/users/uzay95/folders/Jing/media/94beeb3f-53b9-4ff7-ba1a-35620dbd353a/2010-06-10_0847.png,1,Average Popular,Old
+3077639,"I have recently moved to a dark color theme for all my code editors. It is much easier on the eyes. But I recently came across an issue that I can’t figure out how to correct and was hoping that someone will have an answer.
+When the method info box pops up this is what it looks like this:
+
+Notice the method info is unreadable because the colors in the theme are meant for a dark background. How can I change the background of this popup?
+The theme is a modified version of Coding Instinct available on StudioStyles. Here is my modified version. It sets the background for the linenumbers/marker margin plus some other minor tweaks.
+",How can I correct this in the visual studio 2010 theme?,"['visual-studio-2010', 'visual-studio']",6/19/2010 23:32,283,3081139,1,"<p>It's <a href=""http://visualstudiogallery.msdn.microsoft.com/en-us/d0d33361-18e2-46c0-8ff2-4adea1e34fef/"" rel=""nofollow noreferrer"">Visual Studio 2010 Pro Power Tools</a> extension causing the issue. Someone on the Q&amp;A discussion thread for <a href=""http://visualstudiogallery.msdn.microsoft.com/en-us/d0d33361-18e2-46c0-8ff2-4adea1e34fef/"" rel=""nofollow noreferrer"">Visual Studio 2010 Pro Power Tools</a> said:</p>
+
+<blockquote>
+  <p>it seems that the Fonts and Colors selection for ""Signature Help Tooltip Background"" is the Text Editor color definition that effects this. </p>
+</blockquote>
+",https://lh4.ggpht.com/_oVoeVOb8bdQ/TB0KzUVFL7I/AAAAAAAAAI4/07AIRESD1EM/vs2010dark_thumb%5B1%5D.png?imgmax=800,1,Average Popular,Old
+2658187,"using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace EfTestFactory
+{
+    public abstract class _Company
+    {
+        public abstract List<Personel> GetPersonel();
+
+        public abstract List<Prim> GetPrim();
+
+        public abstract List<Finans> GetFinans();
+    }
+
+    public abstract class _Radyoloji
+    {
+        public abstract List<string> GetRadyoloji();
+    }
+    public abstract class _Satis
+    {
+        public abstract List<string> GetSatis();
+    }
+    public abstract class _Muayene
+    {
+        public abstract List<string> GetMuayene();
+    }
+
+    public class Company : _Company
+    {
+
+        public override List<Personel> GetPersonel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<Prim> GetPrim()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<Finans> GetFinans()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Radyoloji : _Radyoloji
+    {
+        public override List<string> GetRadyoloji()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Satis : _Satis
+    {
+        public override List<string> GetSatis()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Muayene : _Muayene
+    {
+        public override List<string> GetMuayene()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
+
+    public class GenoTipController
+    {
+        public object CreateByEnum(DataModelType modeltype)
+        {
+            string enumText = modeltype.ToString(); // will return for example ""Company""
+            Type classType = Type.GetType(enumText); // the Type for Company class
+            object t = Activator.CreateInstance(classType); // create an instance of Company class
+            return t;
+        }
+    }
+
+    public class AntsController
+    {
+        static Dictionary<DataModelType, Func<object>> s_creators =
+            new Dictionary<DataModelType, Func<object>>()
+            {
+                { DataModelType.Radyoloji,  () => new _Radyoloji() },
+                { DataModelType.Company,    () => new _Company() },
+                { DataModelType.Muayene,    () => new _Muayene() },
+                { DataModelType.Satis,      () => new _Satis() },
+            };
+
+        public object CreateByEnum(DataModelType modeltype)
+        {
+            return s_creators[modeltype]();
+        }
+    }
+
+   public class CompanyView
+    {
+        public static List<Personel> GetPersonel()
+        {
+            GenoTipController controller = new GenoTipController();
+            _Company company = controller.CreateByEnum(DataModelType.Company) as _Company;
+            return company.GetPersonel();
+        }
+    }
+
+    public enum DataModelType
+    {
+        Radyoloji,
+        Satis,
+        Muayene,
+        Company
+    }
+}
+if i write above codes i see some error: Cannot create an instance of abstract class or interface 'EfTestFactory_Company'How can i solve it? Look please below pic.
+
+",How can i return abstract class from any factory?,"['c#', 'visual-studio', 'design-patterns', 'architecture', 'oop']",4/17/2010 11:29,281,2658195,2,"<p>You cannot instantiate abstract classes. You could instantiate only concrete classes:</p>
+
+<pre><code>static Dictionary&lt;DataModelType, Func&lt;object&gt;&gt; s_creators =
+    new Dictionary&lt;DataModelType, Func&lt;object&gt;&gt;()
+    {
+        { DataModelType.Radyoloji,  () =&gt; new Radyoloji() },
+        { DataModelType.Company,    () =&gt; new Company() },
+        { DataModelType.Muayene,    () =&gt; new Muayene() },
+        { DataModelType.Satis,      () =&gt; new Satis() },
+    };
+</code></pre>
+",https://i.sstatic.net/gTKpx.png,1,Average Popular,Old
+1168882,"I have the exact same question as this post but with a better description of the problem.
+Using Inteface Builder (IB) I am unable to connect a button to the View Controller (""File Owner"") in Apple's MoviePlayer sample. It will only connect to ""First Responder"" yet somehow, the Sample has accomplished this (see image).
+To put it another way, if I take the MoviePlayer sample, open ""MainWindow.xib"" in IB and delete the connection between ""Button"" and ""My Movie View Controller"" (see image), I am unable to recreate that connection.
+
+(source: chrisbennet.com) 
+I know it must be a noobie question but I'd be unbelievably grateful to anyone who can help me with this.
+Thanks in advance,  
+",I am (also) having trouble making connections between code and Interface Builder,['iphone'],7/22/2009 23:52,277,1169072,1,"<p>In the sample (I just downloaded and opened), that button isn't connected to an IBAction on File's Owner (which in this case is a non-subclassed instance of UIApplication). </p>
+
+<p>It is connected to an IBAction on the view controller for the ""Local"" tab. To re-create it:</p>
+
+<ul>
+<li>Open up MyOverlayView and TabBarController.</li>
+<li>Right-click on the rounded button in the MyOverlayView to bring up the connections inspector.</li>
+<li>Left-drag from the circle next to the ""Touch up inside"" event to the ""Local"" tab button in the TabBarController window. Interface Builder interprets this as you wanting to make a connection to the UIViewController subclass that is managing that tab - in this case MyMovieController.</li>
+<li>From the popup that appears when you release the mouse button, select the IBAction that you want to connect the event to. It was connected to the OverlayViewButtonPressed action. If you look at the code, that function does nothing, but you can put some stuff in there and amuse yourself. Or you could try creating an IBAction on the MoviePlayerAppDelegate and connecting the event there (in which case you would drag the connection to the ""Movie Player App Delegate"" icon in the MainWindow.xib window.</li>
+</ul>
+
+<p>Hope that helps! :)</p>
+",https://i.sstatic.net/TayJx.jpg,1,Average Popular,Old
+2675078,"I am in a need of running the PHP parser for PHP code inside PHP. I am on Windows, and I have tried
+system(""C:\\Program Files (x86)\\PHP\\php.exe -l \""C:/Program Files (x86)/Apache/htdocs/a.php\"""", $output);
+var_dump($output);
+
+without luck. The parameter -l should check for correct PHP syntax, and throw errors if some problems exist. Basically, I want to do something similar to this picture:
+
+(source: mpsoftware.dk) 
+That is, to be able to detect errors in code.
+",How to check PHP filecode syntax in PHP?,"['php', 'debugging', 'syntax']",4/20/2010 12:34,241,2675193,2,"<p>This seems to work:</p>
+
+<pre><code>&lt;?php
+
+$file = dirname(__FILE__) . '/test.php';
+
+//$output will be filled with output from the command
+//$ret will be the return code
+exec('php -l ' . escapeshellarg($file), $output, $ret);
+
+//return code should be zero if it was ok
+if ($ret != 0) {
+    echo 'error:';
+    var_dump($output);
+} else {
+    echo 'ok';   
+}
+</code></pre>
+",https://i.sstatic.net/4hKxT.png,1,Unpopular,Old
+3799289,"In the image below, in my markup, the title of the page is ""Welcome to My sample Web Site"" (not all caps). However, in the split screen, the title is shown in all caps.  
+The code in CSS is:  
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #666666;
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1
+{
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.header h1
+{
+    font-weight: 700;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    color:white;
+    border: none;
+    line-height: 2em;
+    font-size: 2em;
+}
+
+I want to display the title as I coded in the markup (not all caps).
+
+",Question about VS 2010 web application template (html markup),"['css', 'visual-studio-2010']",9/26/2010 18:47,197,3799306,3,"<p>I would try changing <code>font-variant: small-caps;</code> to <code>font-variant: normal;</code></p>
+",https://i.sstatic.net/HNt8o.jpg,1,Unpopular,Old
+1689980,"Not a direct programming question but related.  I have been setting my fonts and colors in Visual Studio 2010.  My quoted strings are showing as Maroon against a black background and I can't seem to find a setting to change the color.  I tried to reset all my settings and the default with the white background still shows this color as maroon.
+Anyone know how I can change it?
+
+
+",Visual Studio setting for quoted text in script tags?,['visual-studio'],11/6/2009 19:57,195,1690014,1,"<p>Try this one:</p>
+
+<pre><code>Tools -&gt; Options -&gt; Fonts &amp; Colors -&gt; Display Items [""String""] = &lt;Your color&gt;
+</code></pre>
+",https://i.sstatic.net/y2PNI.jpg,1,Unpopular,Old
+1230517,"Is there an easy way to make a code TextBox?  
+I'm trying to make my own limited/specialized version of XAMLPad.  
+Displaying the current XAML object tree in the top display is simple enough, using XamlReader.Parse() ... But I'd like the actual XAML code in the bottom window to show up in its appropriate colors.  
+Here is an example of something similar to what I want.
+
+(source: usefulfreeware.net) 
+The above example looks pretty authentic, with the little expander/collapser thingies on the left side as well as close-to-standard coloration of XAML tokens.  
+I believe that this doesn't have to be created from scratch, so I'm asking SO if anyone knows where I might find automated support for this type of ""code"" display.  
+",Is there an easy way to make a code TextBox?,"['xaml', 'textbox', 'colors', 'xamlpad']",8/4/2009 23:57,161,1244768,2,"<p>Kaxaml uses <a href=""http://wiki.sharpdevelop.net/Using%20the%20texteditor.ashx"" rel=""nofollow noreferrer"">ICSharpCode.TextEditor</a>, the text editor component from <a href=""http://www.icsharpcode.net/OpenSource/SD/"" rel=""nofollow noreferrer"">SharpDevelop</a>.</p>
+",https://i.sstatic.net/Idcqe.jpg,1,Unpopular,Old
+2326187,"if(count($this->form->email->getMessages()) > 0)
+                        {
+                            $e = '<ul>';
+                                $m = $this->form->email->getMessages();
+                                foreach($m as $me)
+                                {
+                                    $e .= '<li>';
+                                        $e .= $me;
+                                    $e .= '</li>';
+                                }
+                            $e .= '</ul>';                          
+                            echo $e;
+                            unset($e);
+                            unset($m);
+                        }
+
+I'm currenly passing form object to VIEW and echo every elemen manually.
+But when comes to errors, it takes a lot of code to write.
+Could someone tell, how to output errors for each element without such amount of code?
+Thanks!
+Here is the picture of all decorators before the output:
+
+",Zend Framework configuring decorator,"['zend-framework', 'forms', 'decorator']",2/24/2010 13:14,156,2326856,2,"<p>Found amazing method:</p>
+
+<p>renderFormErrors();</p>
+
+<p>Just what i was looking for. :)</p>
+
+<p>But for individual outputing, can be used decorator. Found on this forum.</p>
+",https://i192.photobucket.com/albums/z228/Somebi/form-decorators.jpg,1,Unpopular,Old
+3933858,"I must be getting a memory leak, I'm calling a graph library view and the view shows the first time I use this button method, but the second time the app crashes, with no real error message, that I can see.
+-(IBAction)graphNavButtonPressed
+{   
+    UIViewController *vc = [[GraphController alloc] init];
+
+    [vc setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
+    [self presentModalViewController:vc animated:YES];  // APP FAILS ON THIS LINE
+    [vc release];
+    return;
+}
+
+Program received signal:  “EXC_BAD_ACCESS”.
+(gdb) bt
+#0  0x02889903 in objc_msgSend ()
+#1  0x0279a1c0 in __useVolatileDomainsForUser ()
+#2  0x0267120c in CFPreferencesCopyAppValue ()
+
+EDIT:
+In GraphController ViewDidLoad I've got this code.
+NSUserDefaults *myDefaults = [NSUserDefaults standardUserDefaults];
+strCurrencySymbol = [myDefaults objectForKey:kNSUCurrency]; //HERE where it crashes
+
+EDIT 2:
+Ive been reading about someone with a similar problem, caused by a view being loaded incorrectly. link text I am doing something perhaps a little odd. In order to use the graph library from a tab bar, I load my date range view and then show the graph in viewDidLoad, then once the graph is closed the date range view remains. The user can then click view graph again to show the graph with different dates. If I don`t do this my view will be blank when the graph is closed. So heres how Im calling the graph.
+
+I`m reusing the date range screen elsewhere so the graph may not be shown.
+Any further suggestions ?
+","iPhone, Why am I getting a memory leak and how do i fix it?",['iphone'],10/14/2010 13:51,150,3934180,2,"<p>I guess you should not release the vc object in the same IBAction, because you are probably using it after arent you? not sure </p>
+",https://i.sstatic.net/1UyVb.jpg,2,Unpopular,Old
+3254437,"Visual Studio 2008 breaks at the following line with the following message:
+
+I don't want it to stop there, it's making debugging a nightmare. Somehow the exception thrown at line 998 is causing this, even though there is a try...catch block somewhere up there that is supposed to catch this exception. Any ideas on how to stop this from happening?
+",VS2008 debugger breaks at unwanted line,"['visual-studio-2008', 'debugging', 'exception', 'breakpoints']",7/15/2010 9:57,147,3255574,2,"<p>I hope you are using the debug build to debug your application. And did you check if you have set the /O flag, if yes then remove it. It did cause me a lot of heartburn while debugging, similarly like yours.</p>
+",https://wiki.mcneel.com/_media/people/weirddebuggerbehaviour.png,2,Unpopular,Old
+3247244,"i try to add data with ExecuteCommand. everything is ok if list<string> data. i converted string type list into arraylist to add sql. But <MyClass> there are rows and column. look below picture.
+  public class MyTally :  ISave
+    {
+        public List<ENG_MPD> engMpdIntersectList { get; set; }
+        private ArrayList engMyTallyList;
+        private EngDataContext engCtx;
+        public MyTally()
+        {
+            engCtx = new EngDataContext();
+            engMpdIntersectList = new List<ENG_MPD>();
+
+        }
+       #region ISave Members
+
+        public bool Save()
+        {
+
+            engMyTallyList = new ArrayList(engMpdIntersectList);
+            System.Windows.Forms.MessageBox.Show(engMyTallyList.Count.ToString());
+
+
+              int rowsAffected = engCtx.ExecuteCommand(""insert into ENG_MYTALLY Values({0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10},{11},{12},{13},{14},{15},{16},{17},{18},{19},{20},"" +
+                                                                                 ""{21},{22},{23},{24},{25},{26},{27},{28},{29},{30},{31},{32},{33},{34},{35},{36},{37},{38},{39},{40},"" +
+                                                                                 ""{41},{42},{43},{44},{45},{46},{47},{48},{49},{50},{51},{52},{53},{54},{55},{56},{57},{58},{59},{60},"" +
+                                                                                 ""{61},{62},{63},{64},{65},{66},{67},{68},{69},{70},{71},{72},{73},{74},{75},{76},{77},{78},{79},{80},"" +
+                                                                                 ""{81},{82},{83},{84},{85},{86},{87},{88},{89},{90},{91},{92},{93},{94},{95},{96},{97},{98},{99},{100},"" +
+                                                                                 ""{101},{102},{103},{104},{105},{106},{107},{108},{109},{110},{111},{112},{113},{114},{115},{116},{117},{118},{119},{120},"" +
+                                                                                 ""{121},{122},{123},{124},{125},{126},{127},{128},{129},{130},{131},{132},{133},{134},{135},{136})"",
+                                                                                 engMyTallyList[0], engMyTallyList[1], engMyTallyList[2], engMyTallyList[3], engMyTallyList[4], engMyTallyList[5], engMyTallyList[6], engMyTallyList[7], engMyTallyList[8], engMyTallyList[9], engMyTallyList[10], engMyTallyList[11], engMyTallyList[12], engMyTallyList[13], engMyTallyList[14], engMyTallyList[15], engMyTallyList[16], engMyTallyList[17], engMyTallyList[18], engMyTallyList[19], engMyTallyList[20],
+                                                                                 engMyTallyList[21], engMyTallyList[22], engMyTallyList[23], engMyTallyList[24], engMyTallyList[25], engMyTallyList[26], engMyTallyList[27], engMyTallyList[28], engMyTallyList[29], engMyTallyList[30], engMyTallyList[31], engMyTallyList[32], engMyTallyList[33], engMyTallyList[34], engMyTallyList[35], engMyTallyList[36], engMyTallyList[37], engMyTallyList[38], engMyTallyList[39], engMyTallyList[40],
+                                                                                 engMyTallyList[41], engMyTallyList[42], engMyTallyList[43], engMyTallyList[44], engMyTallyList[45], engMyTallyList[46], engMyTallyList[47], engMyTallyList[48], engMyTallyList[49], engMyTallyList[50], engMyTallyList[51], engMyTallyList[52], engMyTallyList[53], engMyTallyList[54], engMyTallyList[55], engMyTallyList[56], engMyTallyList[57], engMyTallyList[58], engMyTallyList[59], engMyTallyList[60],
+                                                                                 engMyTallyList[61], engMyTallyList[62], engMyTallyList[63], engMyTallyList[64], engMyTallyList[65], engMyTallyList[66], engMyTallyList[67], engMyTallyList[68], engMyTallyList[69], engMyTallyList[70], engMyTallyList[71], engMyTallyList[72], engMyTallyList[73], engMyTallyList[74], engMyTallyList[75], engMyTallyList[76], engMyTallyList[77], engMyTallyList[78], engMyTallyList[79], engMyTallyList[80],
+                                                                                 engMyTallyList[81], engMyTallyList[82], engMyTallyList[83], engMyTallyList[84], engMyTallyList[85], engMyTallyList[86], engMyTallyList[87], engMyTallyList[88], engMyTallyList[89], engMyTallyList[90], engMyTallyList[91], engMyTallyList[92], engMyTallyList[93], engMyTallyList[94], engMyTallyList[95], engMyTallyList[96], engMyTallyList[97], engMyTallyList[98], engMyTallyList[99], engMyTallyList[100],
+                                                                                 engMyTallyList[101], engMyTallyList[102], engMyTallyList[103], engMyTallyList[104], engMyTallyList[105], engMyTallyList[106], engMyTallyList[107], engMyTallyList[108], engMyTallyList[109], engMyTallyList[110], engMyTallyList[111], engMyTallyList[112], engMyTallyList[113], engMyTallyList[114], engMyTallyList[115], engMyTallyList[116], engMyTallyList[117], engMyTallyList[118], engMyTallyList[119], engMyTallyList[120],
+                                                                                 engMyTallyList[121], engMyTallyList[122], engMyTallyList[123], engMyTallyList[124], engMyTallyList[125], engMyTallyList[126], engMyTallyList[127], engMyTallyList[128], engMyTallyList[129], engMyTallyList[130], engMyTallyList[131], engMyTallyList[132], engMyTallyList[133], engMyTallyList[134], engMyTallyList[135], engMyTallyList[136]);
+             return rowsAffected > 0;
+        }
+
+        #endregion
+    }
+
+
+ engMyTallyList = new ArrayList(engMpdIntersectList);
+engMpdIntersectList is an instance from myClass... how can i use it? my Arraylist values ENG_MPD type i need ENG_MPD columns values...
+",How can i add list data into sqldatabase?,"['c#', 'visual-studio-2008', 'linq', 'linq-to-sql']",7/14/2010 14:39,147,3247326,2,"<pre><code>engCtx.ExecuteCommand(""insert into ENG_MYTALLY Values({0})"", 
+    string.Join("", "", engMyTallyList.Select(x =&gt; x.ToString()).ToArray())
+);
+</code></pre>
+
+<p>Instead of <code>x.ToString()</code> you can call whatever method or property you like that returns string.
+If <code>engMyTallyList</code> is not generic, you will need to cast it before using <code>Select</code>.</p>
+
+<pre><code>engMyTallyList.Cast&lt;MyTally&gt;().Select(x =&gt; x.ToString()).ToArray()
+</code></pre>
+
+<p><strong>Edit:</strong>
+You don't have to convert from <code>List&lt;ENG_MPD&gt;</code> to <code>ArrayList</code> to add it into <code>SQL</code>. Use</p>
+
+<pre><code>engMpdIntersectList.Select(x =&gt; x.ToString()).ToArray()
+</code></pre>
+
+<p>or if you have initially an <code>ArrayList</code> of <code>ENG_MPD</code>, use</p>
+
+<pre><code>engMyTallyList.Cast&lt;ENG_MPD&gt;().Select(x =&gt; x.ToString()).ToArray()
+</code></pre>
+
+<p>I initially thought of <code>engMyTallyList</code> to be a list of MyTally objects, not as they actually are <code>ENG_MPD</code>.</p>
+",https://i.sstatic.net/Pl9A1.png,1,Unpopular,Old
+2307866,"I've ran Build and Analyze on my XML parsing code and found out the following:
+
+(source: skitch.com) 
+How could I fix it?
+",Fixing a memory leak,"['objective-c', 'xcode', 'memory-leaks']",2/21/2010 23:17,133,2307871,3,"<pre><code>[channelListing addObject:[[channelListingItem copy] autorelease]];
+</code></pre>
+",https://i.sstatic.net/9IyX2.jpg,2,Unpopular,Old
+3101592,"i am using jQuery to dynamically add content 
+$(""#articles"").prepend('<article><header><p>info</p><h2>You are using Internet Explorer</h2></header><p>It is recommended that you use a modern browser like Firefox, Chrome or install Google Chrome Frame to experience better performance and advanced HTML5 and CSS3 features.</p></article>');
+
+but the HTML i got was 
+
+notice the /> 
+",Dynamically added AJAX content with wrong markup,"['javascript', 'jquery', 'ajax', 'html']",6/23/2010 12:34,122,3101720,1,"<p>jQuery is using <code>innerHTML</code>, which doesn't always work with HTML5 elements even when the normal ‘shiv’ is in use. You would need another extra workaround hack, <a href=""http://jdbartlett.github.com/innershiv/"" rel=""nofollow noreferrer"">eg this</a>.</p>
+
+<p>I really don't think the proposed new HTML5 elements are ready for real-world use. They get you no practical gain yet, aren't even finalised, and cause a bunch of problems (working around which can be fragile and cost performance).</p>
+
+<p>They don't really add anything semantic to your warning markup, and you're only ever showing it to IE anyway—the browser that can handle them least well of all.</p>
+",https://farm2.static.flickr.com/1079/4727418062_02bcd74008.jpg,2,Unpopular,Old
+2651289,"GenoTipController must produce class according to the enum type. i have 3 class: _Company,_Muayene,_Radyoloji. Also i have CompanyView Class GetPersonel method. if you look GenoTipController my codes need refactoring. Can you understand me? i need a class according to ewnum type must me produce class. For example; case DataModelType.Radyoloji it must return radyoloji= new Radyoloji . Everything must be one switch case? 
+
+ public abstract class _Company
+    {
+        public abstract List<Personel> GetPersonel();
+
+        public abstract List<Prim> GetPrim();
+
+        public abstract List<Finans> GetFinans();
+    }
+
+    public abstract class _Radyoloji
+    {
+        public abstract List<string> GetRadyoloji();
+    }
+    public abstract class _Satis
+    {
+        public abstract List<string> GetSatis();
+    }
+    public abstract class _Muayene
+    {
+        public abstract List<string> GetMuayene();
+    }
+
+    public class Company: _Company
+    {
+
+        public override List<Personel> GetPersonel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<Prim> GetPrim()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<Finans> GetFinans()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Radyoloji : _Radyoloji
+    {
+        public override List<string> GetRadyoloji()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Satis : _Satis
+    {
+        public override List<string> GetSatis()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Muayene : _Muayene
+    {
+        public override List<string> GetMuayene()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+ public class GenoTipController
+    {
+        public _Company GenerateCompany(DataModelType modeltype)
+        {
+            _Company company = null;
+            switch (modeltype)
+            {
+                case DataModelType.Radyoloji:
+                    break;
+                case DataModelType.Satis:
+                    break;
+                case DataModelType.Muayene:
+                    break;
+                case DataModelType.Company:
+                    company = new Company(); 
+                    break;
+                default:
+                    break;
+            }
+
+            return company;
+
+        }
+
+        public _Muayene GenerateMuayene(DataModelType modeltype)
+        {
+            _Muayene muayene = null;
+            switch (modeltype)
+            {
+                case DataModelType.Radyoloji:
+                    break;
+                case DataModelType.Satis:
+                    break;
+                case DataModelType.Muayene:
+                    muayene = new Muayene();
+                    break;
+                case DataModelType.Company:
+                    break;
+                default:
+                    break;
+            }
+
+            return muayene;
+
+        }
+
+        public _Radyoloji GenerateRadyoloji(DataModelType modeltype)
+        {
+            _Radyoloji radyoloji = null;
+            switch (modeltype)
+            {
+                case DataModelType.Radyoloji:
+                    radyoloji = new Radyoloji();
+                    break;
+                case DataModelType.Satis:
+                    break;
+                case DataModelType.Muayene:
+
+                    break;
+                case DataModelType.Company:
+                    break;
+                default:
+                    break;
+            }
+
+            return radyoloji;
+
+        }
+    }
+
+    public class CompanyView
+    {
+        public static List<Personel> GetPersonel()
+        {
+            GenoTipController controller = new GenoTipController();
+            _Company company = controller.GenerateCompany(DataModelType.Company);
+             return company.GetPersonel();
+
+        }
+ }
+
+    public enum DataModelType
+    {
+        Radyoloji,
+        Satis,
+        Muayene,
+        Company
+    }
+}
+
+if use oleksiy.t method :
+ public class GenoTipController
+    {
+
+
+        public object CreateByEnum(DataModelType modeltype)
+        {
+            string enumText = modeltype.ToString(); // will return for example ""Company""
+            Type classType = Type.GetType(enumText); // the Type for Company class
+            object t = Activator.CreateInstance(classType); // create an instance of Company class
+
+            return t;
+        }
+    }
+
+    public class CompanyView
+    {
+        public static List<Personel> GetPersonel()
+        {
+            GenoTipController controller = new GenoTipController();
+            _Company company = controller.CreateByEnum(DataModelType.Company);
+             return company.GetPersonel();
+
+        }
+   }
+    public enum DataModelType
+    {
+        Radyoloji,
+        Satis,
+        Muayene,
+        Company
+    }
+
+
+i face to face error: i like oleksiy method but how can i use it? 
+",MyController class must produce class according to the enum type,"['c#', 'visual-studio', 'design-patterns', 'architecture']",4/16/2010 7:24,114,2651431,3,"<p>You can use a naming convention for Enum names and Class names and create instances via reflection:</p>
+
+<pre><code>namespace MyNamespace
+{
+    public enum DataModelType { Company, Person }
+
+    public class Company
+    {
+    }
+
+    public class Person
+    {
+    }
+
+    public class ObjectFactory
+    {
+        public static object CreateByEnum(DataModelType modelType)
+        {
+            string enumText = modelType.ToString(); // will return for example ""Company""
+            Type classType = Type.GetType(""MyNamespace."" + enumText); // the Type for Company class
+            object t = Activator.CreateInstance(classType); // create an instance of Company class
+
+            return t;
+        }
+    }
+}
+</code></pre>
+",https://i.sstatic.net/TSTPZ.png,2,Unpopular,Old
